@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<TextFileConfiguration>
+    <FilePath>C:\repos\sisInt\cbrtruco.txt</FilePath>
+    <Delimiters>,</Delimiters>
+    <DescriptionClassName>representation.DescCaso</DescriptionClassName>
+    <DescriptionMappings>
+        <Map>CaseId</Map>
+        <Map>Player1Pontos</Map>
+        <Map>Player2Pontos</Map>
+        <Map>Carta1</Map>
+        <Map>Carta2</Map>
+        <Map>Carta3</Map>
+        <Map>RodadaAtual</Map>
+        <Map>RodadasGanhas</Map>
+        <Map>AceitouTruco</Map>
+        <Map>PediuRetruco</Map>
+    </DescriptionMappings>
+</TextFileConfiguration>
