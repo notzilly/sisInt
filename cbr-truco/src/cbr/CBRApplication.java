@@ -11,8 +11,13 @@ import jcolibri.method.retrieve.NNretrieval.NNConfig;
 
 import javax.annotation.Generated;
 import representation.DescCaso;
+import representation.SolCaso;
 import jcolibri.method.retrieve.NNretrieval.NNConfig;
 import jcolibri.cbrcore.Attribute;
+import jcolibri.method.retrieve.RetrievalResult;
+import jcolibri.method.retrieve.NNretrieval.NNScoringMethod;
+import jcolibri.method.retrieve.selection.SelectCases;
+import java.util.Collection;
 
 public class CBRApplication implements StandardCBRApplication {
 
@@ -62,66 +67,54 @@ public class CBRApplication implements StandardCBRApplication {
 		NNConfig simConfig = new NNConfig();
 		simConfig
 				.setDescriptionSimFunction(new jcolibri.method.retrieve.NNretrieval.similarity.global.Average());
-		Attribute attribute0 = new Attribute("CaseId", DescCaso.class);
+		Attribute attribute0 = new Attribute("CasoId", DescCaso.class);
 		simConfig
 				.addMapping(
 						attribute0,
 						new jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold());
 		simConfig.setWeight(attribute0, 0.00);
-		Attribute attribute1 = new Attribute("Player1Pontos", DescCaso.class);
+		Attribute attribute1 = new Attribute("PontosMeus", DescCaso.class);
 		simConfig
 				.addMapping(
 						attribute1,
 						new jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold());
-		simConfig.setWeight(attribute1, 1.00);
-		Attribute attribute2 = new Attribute("Player2Pontos", DescCaso.class);
+		simConfig.setWeight(attribute1, 0.70);
+		Attribute attribute2 = new Attribute("PontosAdv", DescCaso.class);
 		simConfig
 				.addMapping(
 						attribute2,
 						new jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold());
-		simConfig.setWeight(attribute2, 1.00);
+		simConfig.setWeight(attribute2, 0.45);
 		Attribute attribute3 = new Attribute("Carta1", DescCaso.class);
 		simConfig
 				.addMapping(
 						attribute3,
 						new jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold());
-		simConfig.setWeight(attribute3, 0.45);
+		simConfig.setWeight(attribute3, 0.35);
 		Attribute attribute4 = new Attribute("Carta2", DescCaso.class);
 		simConfig
 				.addMapping(
 						attribute4,
 						new jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold());
-		simConfig.setWeight(attribute4, 0.65);
+		simConfig.setWeight(attribute4, 0.50);
 		Attribute attribute5 = new Attribute("Carta3", DescCaso.class);
 		simConfig
 				.addMapping(
 						attribute5,
 						new jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold());
-		simConfig.setWeight(attribute5, 1.00);
-		Attribute attribute6 = new Attribute("RodadaAtual", DescCaso.class);
+		simConfig.setWeight(attribute5, 0.85);
+		Attribute attribute6 = new Attribute("RodAtual", DescCaso.class);
 		simConfig
 				.addMapping(
 						attribute6,
 						new jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold());
-		simConfig.setWeight(attribute6, 1.00);
-		Attribute attribute7 = new Attribute("RodadasGanhas", DescCaso.class);
+		simConfig.setWeight(attribute6, 0.60);
+		Attribute attribute7 = new Attribute("RodGanhas", DescCaso.class);
 		simConfig
 				.addMapping(
 						attribute7,
 						new jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold());
-		simConfig.setWeight(attribute7, 1.00);
-		Attribute attribute8 = new Attribute("AceitouTruco", DescCaso.class);
-		simConfig
-				.addMapping(
-						attribute8,
-						new jcolibri.method.retrieve.NNretrieval.similarity.local.Equal());
-		simConfig.setWeight(attribute8, 1.00);
-		Attribute attribute9 = new Attribute("PediuRetruco", DescCaso.class);
-		simConfig
-				.addMapping(
-						attribute9,
-						new jcolibri.method.retrieve.NNretrieval.similarity.local.Equal());
-		simConfig.setWeight(attribute9, 1.00);
+		simConfig.setWeight(attribute7, 0.85);
 		return simConfig;
 	}
 
@@ -140,6 +133,13 @@ public class CBRApplication implements StandardCBRApplication {
 	@Generated(value = { "ColibriStudio" })	
 	@Override
 	public void cycle(CBRQuery query) throws ExecutionException {
+		NNConfig simConfig = getSimilarityConfig();
+		Collection<RetrievalResult> eval = NNScoringMethod.evaluateSimilarity(
+				casebase.getCases(), query, simConfig);
+		eval = SelectCases.selectTopKRR(eval, 5);
+		System.out.println("Retrieved cases:");
+		for (RetrievalResult nse : eval)
+			System.out.println(nse);
 	}
 
 	@Generated(value = { "ColibriStudio" })
@@ -155,18 +155,15 @@ public class CBRApplication implements StandardCBRApplication {
 	public static void main(String[] args) {
 		CBRApplication cbrApp = new CBRApplication();
 		try {
+					
 			cbrApp.configure();
 			cbrApp.preCycle();
-			
+
 			CBRQuery query = new CBRQuery();
 			query.setDescription(new DescCaso());
 			jcolibri.method.gui.formFilling.ObtainQueryWithFormMethod.obtainQueryWithoutInitialValues(query, null, null);
 			cbrApp.cycle(query);
 			cbrApp.postCycle();
-			
-//			for(CBRCase c: caseBase.getCases())
-//				System.out.println(c);
-			
 		} catch (ExecutionException e) {
 			e.printStackTrace();
 		}

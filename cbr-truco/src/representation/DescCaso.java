@@ -11,40 +11,40 @@ public class DescCaso implements CaseComponent {
 	/* Generated Class. Please Do Not Modify... */ 
 
 
-	private java.lang.Integer CaseId;
+	private java.lang.Integer CasoId;
 
 
-	public java.lang.Integer getCaseId()
+	public java.lang.Integer getCasoId()
 		{
-			return CaseId;
+			return CasoId;
 		}
-	public void setCaseId(java.lang.Integer CaseId0)
+	public void setCasoId(java.lang.Integer CasoId0)
 		{
-			this.CaseId = CaseId0;
-		}
-
-	private java.lang.Integer Player1Pontos;
-
-
-	public java.lang.Integer getPlayer1Pontos()
-		{
-			return Player1Pontos;
-		}
-	public void setPlayer1Pontos(java.lang.Integer Player1Pontos1)
-		{
-			this.Player1Pontos = Player1Pontos1;
+			this.CasoId = CasoId0;
 		}
 
-	private java.lang.Integer Player2Pontos;
+	private java.lang.Integer PontosMeus;
 
 
-	public java.lang.Integer getPlayer2Pontos()
+	public java.lang.Integer getPontosMeus()
 		{
-			return Player2Pontos;
+			return PontosMeus;
 		}
-	public void setPlayer2Pontos(java.lang.Integer Player2Pontos2)
+	public void setPontosMeus(java.lang.Integer PontosMeus1)
 		{
-			this.Player2Pontos = Player2Pontos2;
+			this.PontosMeus = PontosMeus1;
+		}
+
+	private java.lang.Integer PontosAdv;
+
+
+	public java.lang.Integer getPontosAdv()
+		{
+			return PontosAdv;
+		}
+	public void setPontosAdv(java.lang.Integer PontosAdv2)
+		{
+			this.PontosAdv = PontosAdv2;
 		}
 
 	private java.lang.Integer Carta1;
@@ -83,63 +83,39 @@ public class DescCaso implements CaseComponent {
 			this.Carta3 = Carta35;
 		}
 
-	private java.lang.Integer RodadaAtual;
+	private java.lang.Integer RodAtual;
 
 
-	public java.lang.Integer getRodadaAtual()
+	public java.lang.Integer getRodAtual()
 		{
-			return RodadaAtual;
+			return RodAtual;
 		}
-	public void setRodadaAtual(java.lang.Integer RodadaAtual6)
+	public void setRodAtual(java.lang.Integer RodAtual6)
 		{
-			this.RodadaAtual = RodadaAtual6;
-		}
-
-	private java.lang.Integer RodadasGanhas;
-
-
-	public java.lang.Integer getRodadasGanhas()
-		{
-			return RodadasGanhas;
-		}
-	public void setRodadasGanhas(java.lang.Integer RodadasGanhas7)
-		{
-			this.RodadasGanhas = RodadasGanhas7;
+			this.RodAtual = RodAtual6;
 		}
 
-	private java.lang.Boolean AceitouTruco;
+	private java.lang.Integer RodGanhas;
 
 
-	public java.lang.Boolean getAceitouTruco()
+	public java.lang.Integer getRodGanhas()
 		{
-			return AceitouTruco;
+			return RodGanhas;
 		}
-	public void setAceitouTruco(java.lang.Boolean AceitouTruco8)
+	public void setRodGanhas(java.lang.Integer RodGanhas7)
 		{
-			this.AceitouTruco = AceitouTruco8;
-		}
-
-	private java.lang.Boolean PediuRetruco;
-
-
-	public java.lang.Boolean getPediuRetruco()
-		{
-			return PediuRetruco;
-		}
-	public void setPediuRetruco(java.lang.Boolean PediuRetruco9)
-		{
-			this.PediuRetruco = PediuRetruco9;
+			this.RodGanhas = RodGanhas7;
 		}
 
 
 	@Override
 	public Attribute getIdAttribute()
 		{
-			return new Attribute("CaseId",this.getClass());
+			return new Attribute("CasoId",this.getClass());
 		} 
 
 	public String toString()		{
-			return "["+ Carta2 + " , " + RodadaAtual + " , " + AceitouTruco + " , " + Carta1 + " , " + Carta3 + " , " + Player1Pontos + " , " + RodadasGanhas + " , " + Player2Pontos + " , " + CaseId + " , " + PediuRetruco +"]";
+			return "["+ Carta2 + " , " + Carta1 + " , " + RodGanhas + " , " + Carta3 + " , " + CasoId + " , " + RodAtual + " , " + PontosMeus + " , " + PontosAdv +"]";
 		}
 
 }

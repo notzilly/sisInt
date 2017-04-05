@@ -1,0 +1,10 @@
+caseId,pontos1,pontos2,c1,c2,c3,rodAtual,rodGanha,solId,aceitouTruco,pediuRetruco
+
+cbrApp.configure();
+cbrApp.preCycle();
+
+CBRQuery query = new CBRQuery();
+query.setDescription(new DescCaso());
+jcolibri.method.gui.formFilling.ObtainQueryWithFormMethod.obtainQueryWithoutInitialValues(query, null, null);
+cbrApp.cycle(query);
+cbrApp.postCycle();

@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
 <Case>
     <CompoundAttribute isId="false">
-        <attribType/>
+        <attribType>SolCaso</attribType>
         <name>Solution</name>
+        <SimpleAttribute isId="false">
+            <attribType>java.lang.Boolean</attribType>
+            <name>PediuRetruco</name>
+        </SimpleAttribute>
+        <SimpleAttribute isId="false">
+            <attribType>java.lang.Boolean</attribType>
+            <name>AceitouTruco</name>
+        </SimpleAttribute>
+        <SimpleAttribute isId="true">
+            <attribType>java.lang.Integer</attribType>
+            <name>SolId</name>
+        </SimpleAttribute>
     </CompoundAttribute>
     <CompoundAttribute isId="false">
         <attribType/>
@@ -16,20 +28,12 @@
         <attribType>DescCaso</attribType>
         <name>Description</name>
         <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>PediuRetruco</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>AceitouTruco</name>
+            <attribType>java.lang.Integer</attribType>
+            <name>RodGanhas</name>
         </SimpleAttribute>
         <SimpleAttribute isId="false">
             <attribType>java.lang.Integer</attribType>
-            <name>RodadasGanhas</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="false">
-            <attribType>java.lang.Integer</attribType>
-            <name>RodadaAtual</name>
+            <name>RodAtual</name>
         </SimpleAttribute>
         <SimpleAttribute isId="false">
             <attribType>java.lang.Integer</attribType>
@@ -45,15 +49,15 @@
         </SimpleAttribute>
         <SimpleAttribute isId="false">
             <attribType>java.lang.Integer</attribType>
-            <name>Player2Pontos</name>
+            <name>PontosAdv</name>
         </SimpleAttribute>
         <SimpleAttribute isId="false">
             <attribType>java.lang.Integer</attribType>
-            <name>Player1Pontos</name>
+            <name>PontosMeus</name>
         </SimpleAttribute>
         <SimpleAttribute isId="true">
             <attribType>java.lang.Integer</attribType>
-            <name>CaseId</name>
+            <name>CasoId</name>
         </SimpleAttribute>
     </CompoundAttribute>
 </Case>

@@ -4,15 +4,19 @@
     <Delimiters>,</Delimiters>
     <DescriptionClassName>representation.DescCaso</DescriptionClassName>
     <DescriptionMappings>
-        <Map>CaseId</Map>
-        <Map>Player1Pontos</Map>
-        <Map>Player2Pontos</Map>
+        <Map>CasoId</Map>
+        <Map>PontosMeus</Map>
+        <Map>PontosAdv</Map>
         <Map>Carta1</Map>
         <Map>Carta2</Map>
         <Map>Carta3</Map>
-        <Map>RodadaAtual</Map>
-        <Map>RodadasGanhas</Map>
+        <Map>RodAtual</Map>
+        <Map>RodGanhas</Map>
+    </DescriptionMappings>
+    <SolutionClassName>representation.SolCaso</SolutionClassName>
+    <SolutionMappings>
+        <Map>SolId</Map>
         <Map>AceitouTruco</Map>
         <Map>PediuRetruco</Map>
-    </DescriptionMappings>
+    </SolutionMappings>
 </TextFileConfiguration>
