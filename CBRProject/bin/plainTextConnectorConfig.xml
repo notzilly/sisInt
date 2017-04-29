@@ -38,5 +38,7 @@
         <Map>R3AceitouRetruco</Map>
         <Map>R3PediuValeQuatro</Map>
         <Map>R3AceitouValeQuatro</Map>
+        <Map>PontosMeus</Map>
+        <Map>PontosAdv</Map>
     </DescriptionMappings>
 </TextFileConfiguration>

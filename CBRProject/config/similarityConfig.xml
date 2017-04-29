@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
 <SimilarityConfig>
-    <Mapping attribute="Description.R2AceitouEnvido" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
-    <Mapping attribute="Description.R1AceitouValeQuatro" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
+    <Mapping attribute="Description.R2AceitouEnvido" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
+    <Mapping attribute="Description.R1AceitouValeQuatro" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
     <Mapping attribute="Description.R3CartaMinha" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
     <Mapping attribute="Description.R3CartaAdv" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
-    <Mapping attribute="Description.R1AceitouRetruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
+    <Mapping attribute="Description.R1AceitouRetruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
     <Mapping attribute="Description.PontosAdv" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
-    <Mapping attribute="Description.R3PediuTruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
-    <Mapping attribute="Description.R2PediuEnvido" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
-    <Mapping attribute="Description.R3AceitouTruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
+    <Mapping attribute="Description.R3PediuTruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
+    <Mapping attribute="Description.R2PediuEnvido" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
+    <Mapping attribute="Description.R3AceitouTruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
     <Mapping attribute="Description.R1CartaMinha" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
     <Mapping attribute="Description.Carta3" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
-    <Mapping attribute="Description.R2PediuRetruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
-    <Mapping attribute="Description.R3PediuValeQuatro" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
+    <Mapping attribute="Description.R2PediuRetruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
+    <Mapping attribute="Description.R3PediuValeQuatro" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
     <Mapping attribute="Description.Carta2" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
     <Mapping attribute="Description.Carta1" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
-    <Mapping attribute="Description.R2PediuValeQuatro" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
+    <Mapping attribute="Description.R2PediuValeQuatro" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
     <Mapping attribute="Description.R1CartaAdv" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
-    <Mapping attribute="Description.R1PediuTruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
-    <Mapping attribute="Description.R1PediuValeQuatro" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
+    <Mapping attribute="Description.R1PediuTruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
+    <Mapping attribute="Description.R1PediuValeQuatro" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
     <Mapping attribute="Description" function="jcolibri.method.retrieve.NNretrieval.similarity.global.Average" weight="1.00"/>
-    <Mapping attribute="Description.R1AceitouEnvido" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
-    <Mapping attribute="Description.R3AceitouRetruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
+    <Mapping attribute="Description.R1AceitouEnvido" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
+    <Mapping attribute="Description.R3AceitouRetruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
     <Mapping attribute="Description.PontosMeus" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
-    <Mapping attribute="Description.R2AceitouTruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
-    <Mapping attribute="Description.R2AceitouValeQuatro" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
-    <Mapping attribute="Description.R1PediuRetruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
+    <Mapping attribute="Description.R2AceitouTruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
+    <Mapping attribute="Description.R2AceitouValeQuatro" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
+    <Mapping attribute="Description.R1PediuRetruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
     <Mapping attribute="Description.CasoId" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="0.00"/>
-    <Mapping attribute="Description.R1PediuEnvido" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
+    <Mapping attribute="Description.R1PediuEnvido" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
     <Mapping attribute="Description.R2CartaMinha" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
-    <Mapping attribute="Description.R3PediuEnvido" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
+    <Mapping attribute="Description.R3PediuEnvido" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
     <Mapping attribute="Description.R2CartaAdv" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
-    <Mapping attribute="Description.R2PediuTruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
-    <Mapping attribute="Description.R2AceitouRetruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
-    <Mapping attribute="Description.R3AceitouEnvido" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
-    <Mapping attribute="Description.R1AceitouTruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
-    <Mapping attribute="Description.R3PediuRetruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
-    <Mapping attribute="Description.R3AceitouValeQuatro" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Equal" weight="1.00"/>
+    <Mapping attribute="Description.R2PediuTruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
+    <Mapping attribute="Description.R2AceitouRetruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
+    <Mapping attribute="Description.R3AceitouEnvido" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
+    <Mapping attribute="Description.R1AceitouTruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
+    <Mapping attribute="Description.R3PediuRetruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
+    <Mapping attribute="Description.R3AceitouValeQuatro" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
 </SimilarityConfig>
