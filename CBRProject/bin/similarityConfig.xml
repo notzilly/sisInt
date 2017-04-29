@@ -26,7 +26,7 @@
     <Mapping attribute="Description.R2AceitouTruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
     <Mapping attribute="Description.R2AceitouValeQuatro" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
     <Mapping attribute="Description.R1PediuRetruco" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
-    <Mapping attribute="Description.CasoId" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
+    <Mapping attribute="Description.CasoId" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="0.00"/>
     <Mapping attribute="Description.R1PediuEnvido" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
     <Mapping attribute="Description.R2CartaMinha" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>
     <Mapping attribute="Description.R3PediuEnvido" function="jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold" weight="1.00"/>

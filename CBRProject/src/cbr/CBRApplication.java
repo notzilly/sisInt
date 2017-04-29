@@ -88,13 +88,13 @@ public class CBRApplication implements StandardCBRApplication {
 				.addMapping(
 						attribute3,
 						new jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold());
-		simConfig.setWeight(attribute3, 0.00);
+		simConfig.setWeight(attribute3, 1.00);
 		Attribute attribute4 = new Attribute("CasoId", DescCaso.class);
 		simConfig
 				.addMapping(
 						attribute4,
 						new jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold());
-		simConfig.setWeight(attribute4, 1.00);
+		simConfig.setWeight(attribute4, 0.00);
 		Attribute attribute5 = new Attribute("Carta1", DescCaso.class);
 		simConfig
 				.addMapping(
