@@ -1,5 +1,6 @@
 package cbr;
 
+import gui.MainGUI;
 import java.util.Collection;
 
 import javax.annotation.Generated;
@@ -16,6 +17,7 @@ import jcolibri.method.retrieve.NNretrieval.NNConfig;
 import jcolibri.method.retrieve.NNretrieval.NNScoringMethod;
 import jcolibri.method.retrieve.selection.SelectCases;
 import representation.DescCaso;
+import representation.TableModelCaso;
 
 public class CBRApplication implements StandardCBRApplication {
 
@@ -331,13 +333,21 @@ public class CBRApplication implements StandardCBRApplication {
 		CBRApplication cbrApp = new CBRApplication();
 		try {
 			cbrApp.configure();
-			cbrApp.preCycle();
+//                        TableModelCaso tabelaCasos = new TableModelCaso(casebase.getCases());
+                        
+                        MainGUI AppGUI = new MainGUI();
+//                        AppGUI.setTableCasos(casebase.getCases().toArray());
+                        AppGUI.setVisible(true);
+                        
+                        
+                        
+//			cbrApp.preCycle();
 
-			CBRQuery query = new CBRQuery();
-			query.setDescription(new DescCaso());
-			jcolibri.method.gui.formFilling.ObtainQueryWithFormMethod.obtainQueryWithoutInitialValues(query, null, null);
-			cbrApp.cycle(query);
-			cbrApp.postCycle();
+//			CBRQuery query = new CBRQuery();
+//			query.setDescription(new DescCaso());
+//			jcolibri.method.gui.formFilling.ObtainQueryWithFormMethod.obtainQueryWithoutInitialValues(query, null, null);
+//			cbrApp.cycle(query);
+//			cbrApp.postCycle();
 			
 		} catch (ExecutionException e) {
 			e.printStackTrace();
