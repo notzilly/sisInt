@@ -2,11 +2,14 @@ package cbr;
 
 import gui.MainGUI;
 import java.util.Collection;
+import java.util.LinkedList;
 
 import javax.annotation.Generated;
+import javax.swing.JFrame;
 
 import jcolibri.cbraplications.StandardCBRApplication;
 import jcolibri.cbrcore.Attribute;
+import jcolibri.cbrcore.CBRCase;
 import jcolibri.cbrcore.CBRCaseBase;
 import jcolibri.cbrcore.CBRQuery;
 import jcolibri.cbrcore.Connector;
@@ -324,6 +327,10 @@ public class CBRApplication implements StandardCBRApplication {
 	public void postCycle() throws ExecutionException {
 		connector.close();
 	}
+        
+        public LinkedList<CBRCase> retornaCasos(){                
+            return (LinkedList<CBRCase>) casebase.getCases();
+        }
 
 	/**
 	 * Main method
@@ -332,20 +339,17 @@ public class CBRApplication implements StandardCBRApplication {
 	public static void main(String[] args) {
 		CBRApplication cbrApp = new CBRApplication();
 		try {
-			cbrApp.configure();
-//                        TableModelCaso tabelaCasos = new TableModelCaso(casebase.getCases());
-                        
-                        MainGUI AppGUI = new MainGUI();
-//                        AppGUI.setTableCasos(casebase.getCases().toArray());
-                        AppGUI.setVisible(true);
-                        
-                        
-                        
-//			cbrApp.preCycle();
+                    cbrApp.configure();
+                    cbrApp.preCycle();
 
-//			CBRQuery query = new CBRQuery();
-//			query.setDescription(new DescCaso());
-//			jcolibri.method.gui.formFilling.ObtainQueryWithFormMethod.obtainQueryWithoutInitialValues(query, null, null);
+                    CBRQuery query = new CBRQuery();
+                    query.setDescription(new DescCaso());
+                    
+                    MainGUI AppGUI = new MainGUI(new TableModelCaso(cbrApp.retornaCasos()));
+                    AppGUI.setVisible(true);
+                    AppGUI.setExtendedState(AppGUI.getExtendedState() | JFrame.MAXIMIZED_BOTH);
+
+//                    jcolibri.method.gui.formFilling.ObtainQueryWithFormMethod.obtainQueryWithoutInitialValues(query, null, null);
 //			cbrApp.cycle(query);
 //			cbrApp.postCycle();
 			
