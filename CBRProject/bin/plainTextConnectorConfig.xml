@@ -12,18 +12,18 @@
         <Map>R1CartaAdv</Map>
         <Map>R1PediuEnvido</Map>
         <Map>R1AceitouEnvido</Map>
-        <Map>R1AceitouEnvido</Map>
+        <Map>R1PediuTruco</Map>
         <Map>R1AceitouTruco</Map>
         <Map>R1PediuRetruco</Map>
         <Map>R1AceitouRetruco</Map>
-        <Map>R1AceitouRetruco</Map>
+        <Map>R1PediuValeQuatro</Map>
         <Map>R1AceitouValeQuatro</Map>
         <Map>R2CartaMinha</Map>
         <Map>R2CartaAdv</Map>
         <Map>R2PediuEnvido</Map>
         <Map>R2AceitouEnvido</Map>
         <Map>R2PediuTruco</Map>
-        <Map>R3AceitouTruco</Map>
+        <Map>R2AceitouTruco</Map>
         <Map>R2PediuRetruco</Map>
         <Map>R2AceitouRetruco</Map>
         <Map>R2PediuValeQuatro</Map>
@@ -38,5 +38,7 @@
         <Map>R3AceitouRetruco</Map>
         <Map>R3PediuValeQuatro</Map>
         <Map>R3AceitouValeQuatro</Map>
+        <Map>PontosMeus</Map>
+        <Map>PontosAdv</Map>
     </DescriptionMappings>
 </TextFileConfiguration>

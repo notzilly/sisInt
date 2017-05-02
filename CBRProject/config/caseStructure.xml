@@ -17,107 +17,31 @@
         <name>Description</name>
         <SimpleAttribute isId="false">
             <attribType>java.lang.Integer</attribType>
-            <name>PontosAdv</name>
+            <name>R3AceitouValeQuatro</name>
         </SimpleAttribute>
         <SimpleAttribute isId="false">
             <attribType>java.lang.Integer</attribType>
-            <name>PontosMeus</name>
+            <name>R3PediuValeQuatro</name>
         </SimpleAttribute>
         <SimpleAttribute isId="false">
             <attribType>java.lang.Integer</attribType>
-            <name>Carta3</name>
+            <name>R3AceitouRetruco</name>
         </SimpleAttribute>
         <SimpleAttribute isId="false">
             <attribType>java.lang.Integer</attribType>
-            <name>Carta2</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="true">
-            <attribType>java.lang.Integer</attribType>
-            <name>CasoId</name>
+            <name>R3PediuRetruco</name>
         </SimpleAttribute>
         <SimpleAttribute isId="false">
             <attribType>java.lang.Integer</attribType>
-            <name>Carta1</name>
+            <name>R3AceitouTruco</name>
         </SimpleAttribute>
         <SimpleAttribute isId="false">
             <attribType>java.lang.Integer</attribType>
-            <name>R1CartaMinha</name>
+            <name>R3PediuTruco</name>
         </SimpleAttribute>
         <SimpleAttribute isId="false">
             <attribType>java.lang.Integer</attribType>
-            <name>R1CartaAdv</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R1PediuEnvido</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R1AceitouEnvido</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R1PediuTruco</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R1AceitouTruco</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R1PediuRetruco</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R1AceitouRetruco</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R1PediuValeQuatro</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R1AceitouValeQuatro</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="false">
-            <attribType>java.lang.Integer</attribType>
-            <name>R2CartaMinha</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="false">
-            <attribType>java.lang.Integer</attribType>
-            <name>R2CartaAdv</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R2PediuEnvido</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R2AceitouEnvido</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R2PediuTruco</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R2AceitouTruco</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R2PediuRetruco</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R2AceitouRetruco</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R2PediuValeQuatro</name>
-        </SimpleAttribute>
-        <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R2AceitouValeQuatro</name>
+            <name>R3CartaAdv</name>
         </SimpleAttribute>
         <SimpleAttribute isId="false">
             <attribType>java.lang.Integer</attribType>
@@ -125,39 +49,107 @@
         </SimpleAttribute>
         <SimpleAttribute isId="false">
             <attribType>java.lang.Integer</attribType>
-            <name>R3CartaAdv</name>
+            <name>R2AceitouValeQuatro</name>
         </SimpleAttribute>
         <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R3PediuEnvido</name>
+            <attribType>java.lang.Integer</attribType>
+            <name>R2PediuValeQuatro</name>
         </SimpleAttribute>
         <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R3AceitouEnvido</name>
+            <attribType>java.lang.Integer</attribType>
+            <name>R2AceitouRetruco</name>
         </SimpleAttribute>
         <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R3PediuTruco</name>
+            <attribType>java.lang.Integer</attribType>
+            <name>R2PediuRetruco</name>
         </SimpleAttribute>
         <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R3AceitouTruco</name>
+            <attribType>java.lang.Integer</attribType>
+            <name>R2AceitouTruco</name>
         </SimpleAttribute>
         <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R3PediuRetruco</name>
+            <attribType>java.lang.Integer</attribType>
+            <name>R2PediuTruco</name>
         </SimpleAttribute>
         <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R3AceitouRetruco</name>
+            <attribType>java.lang.Integer</attribType>
+            <name>R2CartaAdv</name>
         </SimpleAttribute>
         <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R3PediuValeQuatro</name>
+            <attribType>java.lang.Integer</attribType>
+            <name>R2CartaMinha</name>
         </SimpleAttribute>
         <SimpleAttribute isId="false">
-            <attribType>java.lang.Boolean</attribType>
-            <name>R3AceitouValeQuatro</name>
+            <attribType>java.lang.Integer</attribType>
+            <name>R1AceitouValeQuatro</name>
+        </SimpleAttribute>
+        <SimpleAttribute isId="false">
+            <attribType>java.lang.Integer</attribType>
+            <name>R1PediuValeQuatro</name>
+        </SimpleAttribute>
+        <SimpleAttribute isId="false">
+            <attribType>java.lang.Integer</attribType>
+            <name>R1AceitouRetruco</name>
+        </SimpleAttribute>
+        <SimpleAttribute isId="false">
+            <attribType>java.lang.Integer</attribType>
+            <name>R1PediuRetruco</name>
+        </SimpleAttribute>
+        <SimpleAttribute isId="false">
+            <attribType>java.lang.Integer</attribType>
+            <name>R1AceitouTruco</name>
+        </SimpleAttribute>
+        <SimpleAttribute isId="false">
+            <attribType>java.lang.Integer</attribType>
+            <name>R1PediuTruco</name>
+        </SimpleAttribute>
+        <SimpleAttribute isId="false">
+            <attribType>java.lang.Integer</attribType>
+            <name>R1AceitouEnvido</name>
+        </SimpleAttribute>
+        <SimpleAttribute isId="false">
+            <attribType>java.lang.Integer</attribType>
+            <name>R1PediuEnvido</name>
+        </SimpleAttribute>
+        <SimpleAttribute isId="false">
+            <attribType>java.lang.Integer</attribType>
+            <name>R1CartaAdv</name>
+        </SimpleAttribute>
+        <SimpleAttribute isId="false">
+            <attribType>java.lang.Integer</attribType>
+            <name>R1CartaMinha</name>
+        </SimpleAttribute>
+        <SimpleAttribute isId="false">
+            <attribType>java.lang.Integer</attribType>
+            <name>Carta1</name>
+        </SimpleAttribute>
+        <SimpleAttribute isId="true">
+            <attribType>java.lang.Integer</attribType>
+            <name>CasoId</name>
+        </SimpleAttribute>
+        <SimpleAttribute isId="false">
+            <attribType>java.lang.Integer</attribType>
+            <name>Carta2</name>
+        </SimpleAttribute>
+        <SimpleAttribute isId="false">
+            <attribType>java.lang.Integer</attribType>
+            <name>Carta3</name>
+        </SimpleAttribute>
+        <SimpleAttribute isId="false">
+            <attribType>java.lang.Integer</attribType>
+            <name>PontosMeus</name>
+        </SimpleAttribute>
+        <SimpleAttribute isId="false">
+            <attribType>java.lang.Integer</attribType>
+            <name>PontosAdv</name>
+        </SimpleAttribute>
+        <SimpleAttribute isId="false">
+            <attribType>java.lang.Integer</attribType>
+            <name>GanheiEnvido</name>
+        </SimpleAttribute>
+        <SimpleAttribute isId="false">
+            <attribType>java.lang.Integer</attribType>
+            <name>GanheiVolta</name>
         </SimpleAttribute>
     </CompoundAttribute>
 </Case>

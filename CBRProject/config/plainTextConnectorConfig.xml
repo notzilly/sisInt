@@ -8,30 +8,28 @@
         <Map>Carta1</Map>
         <Map>Carta2</Map>
         <Map>Carta3</Map>
+        <Map>GanheiEnvido</Map>
+        <Map>GanheiVolta</Map>
         <Map>R1CartaMinha</Map>
         <Map>R1CartaAdv</Map>
         <Map>R1PediuEnvido</Map>
         <Map>R1AceitouEnvido</Map>
-        <Map>R1AceitouEnvido</Map>
+        <Map>R1PediuTruco</Map>
         <Map>R1AceitouTruco</Map>
         <Map>R1PediuRetruco</Map>
         <Map>R1AceitouRetruco</Map>
-        <Map>R1AceitouRetruco</Map>
+        <Map>R1PediuValeQuatro</Map>
         <Map>R1AceitouValeQuatro</Map>
         <Map>R2CartaMinha</Map>
         <Map>R2CartaAdv</Map>
-        <Map>R2PediuEnvido</Map>
-        <Map>R2AceitouEnvido</Map>
         <Map>R2PediuTruco</Map>
-        <Map>R3AceitouTruco</Map>
+        <Map>R2AceitouTruco</Map>
         <Map>R2PediuRetruco</Map>
         <Map>R2AceitouRetruco</Map>
         <Map>R2PediuValeQuatro</Map>
         <Map>R2AceitouValeQuatro</Map>
         <Map>R3CartaMinha</Map>
         <Map>R3CartaAdv</Map>
-        <Map>R3PediuEnvido</Map>
-        <Map>R3AceitouEnvido</Map>
         <Map>R3PediuTruco</Map>
         <Map>R3AceitouTruco</Map>
         <Map>R3PediuRetruco</Map>
