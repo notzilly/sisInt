@@ -14,10 +14,11 @@ public class TableModelCaso extends AbstractTableModel {
     private LinkedList<CBRCase> casos;
 
     // Array com os nomes das colunas da tabela
-    private static final String[] nomeColunas = {"ID", "Carta 1", "Carta2", "Carta3", "R1CartaMinha", "R1CartaAdv", "R1PediuEnvido", "R1AceitouEnvido", "R1PediuTruco", 
-        "R1AceitouTruco", "R1PediuRetruco", "R1AceitouRetruco", "R1PediuValeQuatro", "R1AceitouValeQuatro", "R2CartaMinha", "R2CartaAdv", "R2PediuEnvido" , "R2AceitouEnvido",
-        "R2PediuTruco", "R2AceitouTruco", "R2PediuRetruco", "R2AceitouRetruco", "R2PediuValeQuatro", "R2AceitouValeQuatro", "R3CartaMinha", "R3CartaAdv", "R3PediuEnvido" ,
-        "R3AceitouEnvido", "R3PediuTruco", "R3AceitouTruco", "R3PediuRetruco", "R3AceitouRetruco", "R3PediuValeQuatro", "R3AceitouValeQuatro", "PontosMeus", "PontosAdv"};
+    private static final String[] nomeColunas = {"ID", "Carta 1", "Carta2", "Carta3", "GanheiEnvido", "GanheiVolta", "R1CartaMinha", "R1CartaAdv",
+        "R1PediuEnvido", "R1AceitouEnvido", "R1PediuTruco", "R1AceitouTruco", "R1PediuRetruco", "R1AceitouRetruco", "R1PediuValeQuatro", "R1AceitouValeQuatro",
+        "R2CartaMinha", "R2CartaAdv", "R2PediuTruco", "R2AceitouTruco", "R2PediuRetruco", "R2AceitouRetruco", "R2PediuValeQuatro", "R2AceitouValeQuatro",
+        "R3CartaMinha", "R3CartaAdv", "R3PediuTruco", "R3AceitouTruco", "R3PediuRetruco", "R3AceitouRetruco", "R3PediuValeQuatro", "R3AceitouValeQuatro",
+        "PontosMeus", "PontosAdv"};
 
     
     //Construtor Padrão
@@ -63,33 +64,33 @@ public class TableModelCaso extends AbstractTableModel {
             case 3:
                 return dc.getCarta3();
             case 4:
-                return dc.getR1CartaMinha();
+                return dc.getGanheiEnvido();
             case 5:
-                return dc.getR1CartaAdv();
+                return dc.getGanheiVolta();
             case 6:
-                return dc.getR1PediuEnvido();
+                return dc.getR1CartaMinha();
             case 7:
-                return dc.getR1AceitouEnvido();
+                return dc.getR1CartaAdv();
             case 8:
-                return dc.getR1PediuTruco();
+                return dc.getR1PediuEnvido();
             case 9:
-                return dc.getR1AceitouTruco();
+                return dc.getR1AceitouEnvido();
             case 10:
-                return dc.getR1PediuRetruco();
+                return dc.getR1PediuTruco();
             case 11:
-                return dc.getR1AceitouRetruco();
+                return dc.getR1AceitouTruco();
             case 12:
-                return dc.getR1PediuValeQuatro();
+                return dc.getR1PediuRetruco();
             case 13:
-                return dc.getR1AceitouValeQuatro();
+                return dc.getR1AceitouRetruco();
             case 14:
-                return dc.getR2CartaMinha();
+                return dc.getR1PediuValeQuatro();
             case 15:
-                return dc.getR2CartaAdv();
+                return dc.getR1AceitouValeQuatro();
             case 16:
-                return dc.getR2PediuEnvido();
+                return dc.getR2CartaMinha();
             case 17:
-                return dc.getR2AceitouEnvido();
+                return dc.getR2CartaAdv();
             case 18:
                 return dc.getR2PediuTruco();
             case 19:
@@ -107,24 +108,20 @@ public class TableModelCaso extends AbstractTableModel {
             case 25:
                 return dc.getR3CartaAdv();
             case 26:
-                return dc.getR3PediuEnvido();
-            case 27:
-                return dc.getR3AceitouEnvido();
-            case 28:
                 return dc.getR3PediuTruco();
-            case 29:
+            case 27:
                 return dc.getR3AceitouTruco();
-            case 30:
+            case 28:
                 return dc.getR3PediuRetruco();
-            case 31:
+            case 29:
                 return dc.getR3AceitouRetruco();
-            case 32:
+            case 30:
                 return dc.getR3PediuValeQuatro();
-            case 33:
+            case 31:
                 return dc.getR3AceitouValeQuatro();
-            case 34:
+            case 32:
                 return dc.getPontosMeus();
-            case 35:
+            case 33:
                 return dc.getPontosAdv();
         }
         return null;

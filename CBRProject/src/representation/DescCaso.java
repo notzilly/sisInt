@@ -9,6 +9,25 @@ public class DescCaso implements CaseComponent {
 
 	/* Generated Class. Please Do Not Modify... */ 
 
+         private java.lang.Integer GanheiEnvido;
+    
+        public java.lang.Integer getGanheiEnvido() {
+            return GanheiEnvido;
+        }
+
+        public void setGanheiEnvido(java.lang.Integer GanheiEnvido) {
+            this.GanheiEnvido = GanheiEnvido;
+        }
+    
+        private java.lang.Integer GanheiVolta;
+
+        public java.lang.Integer getGanheiVolta() {
+            return GanheiVolta;
+        }
+
+        public void setGanheiVolta(java.lang.Integer GanheiVolta) {
+            this.GanheiVolta = GanheiVolta;
+        }
 
 	private java.lang.Integer PontosAdv;
 
@@ -226,30 +245,6 @@ public class DescCaso implements CaseComponent {
 			this.R2CartaAdv = R2CartaAdv17;
 		}
 
-	private java.lang.Integer R2PediuEnvido;
-
-
-	public java.lang.Integer getR2PediuEnvido()
-		{
-			return R2PediuEnvido;
-		}
-	public void setR2PediuEnvido(java.lang.Integer R2PediuEnvido18)
-		{
-			this.R2PediuEnvido = R2PediuEnvido18;
-		}
-
-	private java.lang.Integer R2AceitouEnvido;
-
-
-	public java.lang.Integer getR2AceitouEnvido()
-		{
-			return R2AceitouEnvido;
-		}
-	public void setR2AceitouEnvido(java.lang.Integer R2AceitouEnvido19)
-		{
-			this.R2AceitouEnvido = R2AceitouEnvido19;
-		}
-
 	private java.lang.Integer R2PediuTruco;
 
 
@@ -346,30 +341,6 @@ public class DescCaso implements CaseComponent {
 			this.R3CartaAdv = R3CartaAdv27;
 		}
 
-	private java.lang.Integer R3PediuEnvido;
-
-
-	public java.lang.Integer getR3PediuEnvido()
-		{
-			return R3PediuEnvido;
-		}
-	public void setR3PediuEnvido(java.lang.Integer R3PediuEnvido28)
-		{
-			this.R3PediuEnvido = R3PediuEnvido28;
-		}
-
-	private java.lang.Integer R3AceitouEnvido;
-
-
-	public java.lang.Integer getR3AceitouEnvido()
-		{
-			return R3AceitouEnvido;
-		}
-	public void setR3AceitouEnvido(java.lang.Integer R3AceitouEnvido29)
-		{
-			this.R3AceitouEnvido = R3AceitouEnvido29;
-		}
-
 	private java.lang.Integer R3PediuTruco;
 
 
@@ -451,8 +422,7 @@ public class DescCaso implements CaseComponent {
 
         @Override
 	public String toString()		{
-			return "["+ CasoId + " , " + Carta1 + " , " + Carta2 + " , " + Carta3 + " , " + R1CartaMinha + " , " + R1CartaAdv + " , " + R1PediuEnvido + " , " + R1AceitouEnvido + " , " + R1PediuTruco + " , " + R1AceitouTruco + " , " + R1PediuRetruco + " , " + R1AceitouRetruco + " , " + R1PediuValeQuatro + " , " + R1AceitouValeQuatro + " , " + R2CartaMinha + " , " + R2CartaAdv + " , " + R2PediuEnvido + " , " + R2AceitouEnvido + " , " + R2PediuTruco + " , " + R2AceitouTruco + " , " + R2PediuRetruco + " , " + R2AceitouRetruco + " , " + R2PediuValeQuatro + " , " + R2AceitouValeQuatro + " , " + R3CartaMinha + " , " + R3CartaAdv + " , " + R3PediuEnvido + " , " + R3AceitouEnvido + " , " + R3PediuTruco + " , " + R3AceitouTruco + " , " + R3PediuRetruco + " , " + R3AceitouRetruco + " , " + R3PediuValeQuatro + " , " + R3AceitouValeQuatro + " , " + PontosMeus + " , " + PontosAdv + "]";
-//			return "["+ R3PediuEnvido + " , " + R3AceitouRetruco + " , " + PontosMeus + " , " + R2PediuTruco + " , " + R3AceitouValeQuatro + " , " + R2CartaMinha + " , " + Carta2 + " , " + R3AceitouEnvido + " , " + Carta1 + " , " + R1AceitouEnvido + " , " + Carta3 + " , " + R1CartaAdv + " , " + R2CartaAdv + " , " + R2AceitouEnvido + " , " + R3CartaAdv + " , " + R2AceitouValeQuatro + " , " + PontosAdv + " , " + R2AceitouRetruco + " , " + R1PediuEnvido + " , " + R1AceitouTruco + " , " + R3PediuTruco + " , " + R3CartaMinha + " , " + R3AceitouTruco + " , " + R1PediuTruco + " , " + R1CartaMinha + " , " + R1PediuValeQuatro + " , " + R3PediuRetruco + " , " + R1PediuRetruco + " , " + R2PediuEnvido + " , " + R1AceitouValeQuatro + " , " + R2PediuRetruco + " , " + R3PediuValeQuatro + " , " + CasoId + " , " + R2PediuValeQuatro + " , " + R1AceitouRetruco + " , " + R2AceitouTruco +"]";
+			return "["+ CasoId + " , " + Carta1 + " , " + Carta2 + " , " + Carta3 + " , " + GanheiEnvido + " , " + GanheiVolta + " , " + R1CartaMinha + " , " + R1CartaAdv + " , " + R1PediuEnvido + " , " + R1AceitouEnvido + " , " + R1PediuTruco + " , " + R1AceitouTruco + " , " + R1PediuRetruco + " , " + R1AceitouRetruco + " , " + R1PediuValeQuatro + " , " + R1AceitouValeQuatro + " , " + R2CartaMinha + " , " + R2CartaAdv + " , " + R2PediuTruco + " , " + R2AceitouTruco + " , " + R2PediuRetruco + " , " + R2AceitouRetruco + " , " + R2PediuValeQuatro + " , " + R2AceitouValeQuatro + " , " + R3CartaMinha + " , " + R3CartaAdv + " , " + R3PediuTruco + " , " + R3AceitouTruco + " , " + R3PediuRetruco + " , " + R3AceitouRetruco + " , " + R3PediuValeQuatro + " , " + R3AceitouValeQuatro + " , " + PontosMeus + " , " + PontosAdv + "]";
 		}
 
 }
