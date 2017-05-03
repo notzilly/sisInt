@@ -26,59 +26,59 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabelTitulo" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelTitulo" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabelCarta1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelCarta2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelCarta3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelGanheiEnvido" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelGanheiVolta" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelPontosMeus" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelPontosAdv" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabelR1PediuValeQuatro" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR1AceitouEnvido" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR1PediuTruco" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR1AceitouTruco" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR1PediuRetruco" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR1AceitouRetruco" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR1AceitouValeQuatro" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR1PediuEnvido" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabelR2AceitouTruco" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR2PediuRetruco" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR2AceitouValeQuatro" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR2PediuValeQuatro" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR2AceitouRetruco" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR2PediuTruco" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR3AceitouTruco" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR3PediuRetruco" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR3AceitouValeQuatro" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR3PediuValeQuatro" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR3AceitouRetruco" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR3PediuTruco" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <Component id="jLabelCarta1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelCarta2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelCarta3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelGanheiEnvido" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelGanheiVolta" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelPontosMeus" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelPontosAdv" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="13" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabelR1PediuValeQuatro" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR1AceitouEnvido" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR1PediuTruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR1AceitouTruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR1PediuRetruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR1AceitouRetruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR1AceitouValeQuatro" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR1PediuEnvido" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR1CartaAdv" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR1CartaMinha" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabelR2AceitouRetruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR2AceitouValeQuatro" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR2PediuTruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR2AceitouTruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR2PediuRetruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR2CartaMinha" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR2CartaAdv" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR2PediuValeQuatro" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR3AceitouTruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR3PediuRetruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR3AceitouValeQuatro" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR3PediuValeQuatro" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR3AceitouRetruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR3PediuTruco" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR3CartaMinha" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelR3CartaAdv" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -90,8 +90,51 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jLabelCarta1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelCarta2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelCarta3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelGanheiEnvido" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelGanheiVolta" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelPontosAdv" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelPontosMeus" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jLabelR2CartaMinha" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelR2CartaAdv" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelR2PediuTruco" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelR2AceitouTruco" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelR2PediuRetruco" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelR2AceitouRetruco" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelR2PediuValeQuatro" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelR2AceitouValeQuatro" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jLabelR3CartaMinha" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelR3CartaAdv" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabelR3PediuTruco" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabelR3AceitouTruco" min="-2" max="-2" attributes="0"/>
@@ -104,68 +147,28 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabelR3AceitouValeQuatro" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabelCarta1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelR1PediuEnvido" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabelR2PediuTruco" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLabelR1CartaMinha" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="jLabelCarta2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabelCarta3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabelGanheiEnvido" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabelGanheiVolta" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabelPontosMeus" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabelR1AceitouEnvido" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR2AceitouTruco" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabelR1PediuTruco" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR2PediuRetruco" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabelR1AceitouTruco" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR2AceitouRetruco" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabelR1PediuRetruco" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR2PediuValeQuatro" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabelR1AceitouRetruco" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabelR2AceitouValeQuatro" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
+                      <Component id="jLabelR1CartaAdv" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelR1PediuEnvido" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelR1AceitouEnvido" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelR1PediuTruco" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelR1AceitouTruco" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelR1PediuRetruco" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelR1AceitouRetruco" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelR1PediuValeQuatro" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabelR1AceitouValeQuatro" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabelPontosAdv" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabelR1PediuValeQuatro" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLabelR1AceitouValeQuatro" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -179,9 +182,6 @@
         </Property>
         <Property name="text" type="java.lang.String" value="jLabelTitulo"/>
       </Properties>
-      <AccessibilityProperties>
-        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="jLabelTitulo"/>
-      </AccessibilityProperties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelCarta1">
       <Properties>
@@ -206,9 +206,6 @@
         </Property>
         <Property name="text" type="java.lang.String" value="jLabelCarta3"/>
       </Properties>
-      <AccessibilityProperties>
-        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="jLabelCarta3"/>
-      </AccessibilityProperties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelGanheiEnvido">
       <Properties>
@@ -363,9 +360,6 @@
         </Property>
         <Property name="text" type="java.lang.String" value="jLabelR2AceitouTruco"/>
       </Properties>
-      <AccessibilityProperties>
-        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="jLabelR2AceitouTruco"/>
-      </AccessibilityProperties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabelR2PediuRetruco">
       <Properties>
@@ -437,6 +431,54 @@
           <Font name="Tahoma" size="12" style="0"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabelR3PediuRetruco"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelR1CartaMinha">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="12" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="jLabelR1CartaMinha"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelR1CartaAdv">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="12" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="jLabelR1CartaAdv"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelR2CartaMinha">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="12" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="jLabelR2CartaMinha"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelR2CartaAdv">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="12" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="jLabelR2CartaAdv"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelR3CartaAdv">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="12" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="jLabelR3CartaAdv"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabelR3CartaMinha">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="12" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="jLabelR3CartaMinha"/>
       </Properties>
     </Component>
   </SubComponents>

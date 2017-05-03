@@ -36,6 +36,8 @@ public class CasoGUI extends javax.swing.JFrame {
         jLabelPontosMeus.setText("Pontos Meus: " + descCaso.getPontosMeus().toString());
         jLabelPontosAdv.setText("Pontos Adv: " + descCaso.getPontosAdv().toString());
         
+        jLabelR1CartaMinha.setText("Carta Minha: " + descCaso.getR1CartaMinha().toString());
+        jLabelR1CartaAdv.setText("Carta Adv: " + descCaso.getR1CartaAdv().toString());
         jLabelR1PediuEnvido.setText("Pediu Envido: " + descCaso.getR1PediuEnvido().toString());
         jLabelR1AceitouEnvido.setText("Aceitou Envido: " + descCaso.getR1AceitouEnvido().toString());
         jLabelR1PediuTruco.setText("Pediu Truco: " + descCaso.getR1PediuTruco().toString());
@@ -45,6 +47,8 @@ public class CasoGUI extends javax.swing.JFrame {
         jLabelR1PediuValeQuatro.setText("Pediu Vale 4: " + descCaso.getR1PediuValeQuatro().toString());
         jLabelR1AceitouValeQuatro.setText("Aceitou Vale 4: " + descCaso.getR1AceitouValeQuatro().toString());
         
+        jLabelR2CartaMinha.setText("Carta Minha: " + descCaso.getR2CartaMinha().toString());
+        jLabelR2CartaAdv.setText("Carta Adv: " + descCaso.getR2CartaAdv().toString());
         jLabelR2PediuTruco.setText("Pediu Truco: " + descCaso.getR2PediuTruco().toString());
         jLabelR2AceitouTruco.setText("Aceitou Truco: " + descCaso.getR2AceitouTruco().toString());
         jLabelR2PediuRetruco.setText("Pediu Retruco: " + descCaso.getR2PediuRetruco().toString());
@@ -52,6 +56,8 @@ public class CasoGUI extends javax.swing.JFrame {
         jLabelR2PediuValeQuatro.setText("Pediu Vale 4: " + descCaso.getR2PediuValeQuatro().toString());
         jLabelR2AceitouValeQuatro.setText("Aceitou Vale 4: " + descCaso.getR2AceitouValeQuatro().toString());
         
+        jLabelR3CartaMinha.setText("Carta Minha: " + descCaso.getR3CartaMinha().toString());
+        jLabelR3CartaAdv.setText("Carta Adv: " + descCaso.getR3CartaAdv().toString());
         jLabelR3PediuTruco.setText("Pediu Truco: " + descCaso.getR3PediuTruco().toString());
         jLabelR3AceitouTruco.setText("Aceitou Truco: " + descCaso.getR3AceitouTruco().toString());
         jLabelR3PediuRetruco.setText("Pediu Retruco: " + descCaso.getR3PediuRetruco().toString());
@@ -102,6 +108,12 @@ public class CasoGUI extends javax.swing.JFrame {
         jLabelR3PediuTruco = new javax.swing.JLabel();
         jLabelR3AceitouTruco = new javax.swing.JLabel();
         jLabelR3PediuRetruco = new javax.swing.JLabel();
+        jLabelR1CartaMinha = new javax.swing.JLabel();
+        jLabelR1CartaAdv = new javax.swing.JLabel();
+        jLabelR2CartaMinha = new javax.swing.JLabel();
+        jLabelR2CartaAdv = new javax.swing.JLabel();
+        jLabelR3CartaAdv = new javax.swing.JLabel();
+        jLabelR3CartaMinha = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -201,6 +213,24 @@ public class CasoGUI extends javax.swing.JFrame {
         jLabelR3PediuRetruco.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabelR3PediuRetruco.setText("jLabelR3PediuRetruco");
 
+        jLabelR1CartaMinha.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabelR1CartaMinha.setText("jLabelR1CartaMinha");
+
+        jLabelR1CartaAdv.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabelR1CartaAdv.setText("jLabelR1CartaAdv");
+
+        jLabelR2CartaMinha.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabelR2CartaMinha.setText("jLabelR2CartaMinha");
+
+        jLabelR2CartaAdv.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabelR2CartaAdv.setText("jLabelR2CartaAdv");
+
+        jLabelR3CartaAdv.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabelR3CartaAdv.setText("jLabelR3CartaAdv");
+
+        jLabelR3CartaMinha.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabelR3CartaMinha.setText("jLabelR3CartaMinha");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -208,51 +238,53 @@ public class CasoGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelTitulo)
+                    .addComponent(jSeparator1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabelTitulo)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelCarta1)
-                                    .addComponent(jLabelCarta2)
-                                    .addComponent(jLabelCarta3)
-                                    .addComponent(jLabelGanheiEnvido)
-                                    .addComponent(jLabelGanheiVolta)
-                                    .addComponent(jLabelPontosMeus)
-                                    .addComponent(jLabelPontosAdv))
-                                .addGap(25, 25, 25)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelR1PediuValeQuatro)
-                                    .addComponent(jLabelR1AceitouEnvido)
-                                    .addComponent(jLabelR1PediuTruco)
-                                    .addComponent(jLabelR1AceitouTruco)
-                                    .addComponent(jLabelR1PediuRetruco)
-                                    .addComponent(jLabelR1AceitouRetruco)
-                                    .addComponent(jLabelR1AceitouValeQuatro)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabelR1PediuEnvido))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabelR2AceitouTruco)
-                                    .addComponent(jLabelR2PediuRetruco)
-                                    .addComponent(jLabelR2AceitouValeQuatro)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabelR2PediuValeQuatro)
-                                    .addComponent(jLabelR2AceitouRetruco)
-                                    .addComponent(jLabelR2PediuTruco))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabelR3AceitouTruco)
-                                    .addComponent(jLabelR3PediuRetruco)
-                                    .addComponent(jLabelR3AceitouValeQuatro)
-                                    .addComponent(jLabelR3PediuValeQuatro)
-                                    .addComponent(jLabelR3AceitouRetruco)
-                                    .addComponent(jLabelR3PediuTruco))))
-                        .addGap(0, 13, Short.MAX_VALUE))
-                    .addComponent(jSeparator1))
-                .addContainerGap())
+                            .addComponent(jLabelCarta1)
+                            .addComponent(jLabelCarta2)
+                            .addComponent(jLabelCarta3)
+                            .addComponent(jLabelGanheiEnvido)
+                            .addComponent(jLabelGanheiVolta)
+                            .addComponent(jLabelPontosMeus)
+                            .addComponent(jLabelPontosAdv)
+                            .addComponent(jLabel1))
+                        .addGap(25, 25, 25)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelR1PediuValeQuatro)
+                            .addComponent(jLabelR1AceitouEnvido)
+                            .addComponent(jLabelR1PediuTruco)
+                            .addComponent(jLabelR1AceitouTruco)
+                            .addComponent(jLabelR1PediuRetruco)
+                            .addComponent(jLabelR1AceitouRetruco)
+                            .addComponent(jLabelR1AceitouValeQuatro)
+                            .addComponent(jLabelR1PediuEnvido)
+                            .addComponent(jLabelR1CartaAdv)
+                            .addComponent(jLabelR1CartaMinha)
+                            .addComponent(jLabel2))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelR2AceitouRetruco)
+                            .addComponent(jLabelR2AceitouValeQuatro)
+                            .addComponent(jLabelR2PediuTruco)
+                            .addComponent(jLabelR2AceitouTruco)
+                            .addComponent(jLabelR2PediuRetruco)
+                            .addComponent(jLabelR2CartaMinha)
+                            .addComponent(jLabelR2CartaAdv)
+                            .addComponent(jLabelR2PediuValeQuatro)
+                            .addComponent(jLabel3))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabelR3AceitouTruco)
+                            .addComponent(jLabelR3PediuRetruco)
+                            .addComponent(jLabelR3AceitouValeQuatro)
+                            .addComponent(jLabelR3PediuValeQuatro)
+                            .addComponent(jLabelR3AceitouRetruco)
+                            .addComponent(jLabelR3PediuTruco)
+                            .addComponent(jLabelR3CartaMinha)
+                            .addComponent(jLabelR3CartaAdv)))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -262,8 +294,48 @@ public class CasoGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabelCarta1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelCarta2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelCarta3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelGanheiEnvido)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelGanheiVolta)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelPontosAdv)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelPontosMeus))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabelR2CartaMinha)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelR2CartaAdv)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelR2PediuTruco)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelR2AceitouTruco)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelR2PediuRetruco)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelR2AceitouRetruco)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelR2PediuValeQuatro)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelR2AceitouValeQuatro))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabelR3CartaMinha)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelR3CartaAdv)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabelR3PediuTruco)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabelR3AceitouTruco)
@@ -275,61 +347,28 @@ public class CasoGUI extends javax.swing.JFrame {
                         .addComponent(jLabelR3PediuValeQuatro)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabelR3AceitouValeQuatro))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelCarta1)
-                            .addComponent(jLabelR1PediuEnvido)
-                            .addComponent(jLabelR2PediuTruco))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabelR1CartaMinha)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabelCarta2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabelCarta3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabelGanheiEnvido)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabelGanheiVolta)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabelPontosMeus))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabelR1AceitouEnvido)
-                                    .addComponent(jLabelR2AceitouTruco))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabelR1PediuTruco)
-                                    .addComponent(jLabelR2PediuRetruco))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabelR1AceitouTruco)
-                                    .addComponent(jLabelR2AceitouRetruco))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabelR1PediuRetruco)
-                                    .addComponent(jLabelR2PediuValeQuatro))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabelR1AceitouRetruco)
-                                    .addComponent(jLabelR2AceitouValeQuatro))))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelPontosAdv)
-                    .addComponent(jLabelR1PediuValeQuatro))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelR1AceitouValeQuatro)
+                        .addComponent(jLabelR1CartaAdv)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelR1PediuEnvido)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelR1AceitouEnvido)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelR1PediuTruco)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelR1AceitouTruco)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelR1PediuRetruco)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelR1AceitouRetruco)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelR1PediuValeQuatro)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelR1AceitouValeQuatro)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        jLabelTitulo.getAccessibleContext().setAccessibleName("jLabelTitulo");
-        jLabelCarta3.getAccessibleContext().setAccessibleName("jLabelCarta3");
-        jLabelR2AceitouTruco.getAccessibleContext().setAccessibleName("jLabelR2AceitouTruco");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -386,6 +425,8 @@ public class CasoGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelR1AceitouRetruco;
     private javax.swing.JLabel jLabelR1AceitouTruco;
     private javax.swing.JLabel jLabelR1AceitouValeQuatro;
+    private javax.swing.JLabel jLabelR1CartaAdv;
+    private javax.swing.JLabel jLabelR1CartaMinha;
     private javax.swing.JLabel jLabelR1PediuEnvido;
     private javax.swing.JLabel jLabelR1PediuRetruco;
     private javax.swing.JLabel jLabelR1PediuTruco;
@@ -393,12 +434,16 @@ public class CasoGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelR2AceitouRetruco;
     private javax.swing.JLabel jLabelR2AceitouTruco;
     private javax.swing.JLabel jLabelR2AceitouValeQuatro;
+    private javax.swing.JLabel jLabelR2CartaAdv;
+    private javax.swing.JLabel jLabelR2CartaMinha;
     private javax.swing.JLabel jLabelR2PediuRetruco;
     private javax.swing.JLabel jLabelR2PediuTruco;
     private javax.swing.JLabel jLabelR2PediuValeQuatro;
     private javax.swing.JLabel jLabelR3AceitouRetruco;
     private javax.swing.JLabel jLabelR3AceitouTruco;
     private javax.swing.JLabel jLabelR3AceitouValeQuatro;
+    private javax.swing.JLabel jLabelR3CartaAdv;
+    private javax.swing.JLabel jLabelR3CartaMinha;
     private javax.swing.JLabel jLabelR3PediuRetruco;
     private javax.swing.JLabel jLabelR3PediuTruco;
     private javax.swing.JLabel jLabelR3PediuValeQuatro;
