@@ -20,7 +20,6 @@ import jcolibri.method.retrieve.NNretrieval.NNConfig;
 import jcolibri.method.retrieve.NNretrieval.NNScoringMethod;
 import jcolibri.method.retrieve.selection.SelectCases;
 import representation.DescCaso;
-import representation.TableModelCaso;
 
 public class CBRApplication implements StandardCBRApplication {
 
@@ -256,7 +255,7 @@ public class CBRApplication implements StandardCBRApplication {
                     CBRQuery query = new CBRQuery();
                     query.setDescription(new DescCaso());
                     
-                    MainGUI AppGUI = new MainGUI(new TableModelCaso(cbrApp.retornaCasos()));
+                    MainGUI AppGUI = new MainGUI(cbrApp.retornaCasos());
                     AppGUI.setVisible(true);
                     AppGUI.setExtendedState(AppGUI.getExtendedState() | JFrame.MAXIMIZED_BOTH);
 

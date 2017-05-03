@@ -5,6 +5,10 @@
  */
 package gui;
 
+import controller.CBRController;
+import java.util.LinkedList;
+import javax.swing.JTable;
+import jcolibri.cbrcore.CBRCase;
 import representation.TableModelCaso;
 
 /**
@@ -13,26 +17,24 @@ import representation.TableModelCaso;
  */
 public class MainGUI extends javax.swing.JFrame {
 
-    private TableModelCaso tableCasos;
-
-    public TableModelCaso getTableCasos() {
-        return tableCasos;
-    }
-
-    public void setTableCasos(TableModelCaso tableCasos) {
-        this.tableCasos = tableCasos;
-    }
-    
+    private CBRController controller;
+    private TableModelCaso tabelaCasos;
     
     /**
      * Creates new form MainGUI
-     * @param tc
+     * @param casos
      */
-    public MainGUI(TableModelCaso tc) {
-        tableCasos = tc;
+    public MainGUI(LinkedList<CBRCase> casos) {
+        tabelaCasos = new TableModelCaso(casos);
+        controller = new CBRController(this, tabelaCasos);
+        
         initComponents();
     }
 
+    public JTable getjTableTodosOsCasos() {
+        return jTableTodosOsCasos;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -46,7 +48,7 @@ public class MainGUI extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTableTodosOsCasos = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,9 +65,14 @@ public class MainGUI extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Nova Consulta", jPanel1);
 
-        jTable1.setModel(tableCasos);
-        jTable1.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
-        jScrollPane1.setViewportView(jTable1);
+        jTableTodosOsCasos.setModel(tabelaCasos);
+        jTableTodosOsCasos.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        jTableTodosOsCasos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTableTodosOsCasosMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jTableTodosOsCasos);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -103,6 +110,10 @@ public class MainGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTableTodosOsCasosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableTodosOsCasosMouseClicked
+        controller.selecionaCaso();
+    }//GEN-LAST:event_jTableTodosOsCasosMouseClicked
 
     /**
      * @param args the command line arguments
@@ -144,6 +155,6 @@ public class MainGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTableTodosOsCasos;
     // End of variables declaration//GEN-END:variables
 }

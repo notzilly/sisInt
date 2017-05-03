@@ -31,6 +31,11 @@ public class TableModelCaso extends AbstractTableModel {
         this.casos = listCasos;
     }
     
+    //Seleciona um Caso na rowSelected passada
+    public DescCaso select(int rowSelected) {
+        return (DescCaso) casos.get(rowSelected).getDescription();
+    }
+    
     //Pega o nome de uma coluna da tabela
     @Override
     public String getColumnName(int columnIndex) {
