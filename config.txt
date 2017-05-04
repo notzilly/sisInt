@@ -1,4 +1,4 @@
-caseId,pontos1,pontos2,c1,c2,c3,rodAtual,rodGanha,solId,aceitouTruco,pediuRetruco
+id,carta1,carta2,carta3,ganheiEnvido,ganheiVolta,r1CartaMinha,r1CartaAdv,r1PediuEnvido,r1AceitouEnvido,r1PediuTruco,r1AceitouTruco,r1PediuRetruco,r1AceitouRetruco,r1PediuValeQuatro,r1AceitouValeQuatro,r2CartaMinha,r2CartaAdv,r2PediuTruco,r2AceitouTruco,r2PediuRetruco,r2AceitouRetruco,r2PediuValeQuatro,r2AceitouValeQuatro,r3CartaMinha,r3CartaAdv,r3PediuTruco,r3AceitouTruco,r3PediuRetruco,r3AceitouRetruco,r3PediuValeQuatro,r3AceitouValeQuatro,pontosMeus,pontosAdv
 
 cbrApp.configure();
 cbrApp.preCycle();
