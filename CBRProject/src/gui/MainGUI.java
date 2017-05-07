@@ -8,6 +8,7 @@ package gui;
 import controller.CBRController;
 import java.util.LinkedList;
 import javax.swing.JTable;
+import javax.swing.UIManager;
 import jcolibri.cbrcore.CBRCase;
 import representation.TableModelCaso;
 
@@ -25,6 +26,12 @@ public class MainGUI extends javax.swing.JFrame {
      * @param casos
      */
     public MainGUI(LinkedList<CBRCase> casos) {
+        
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+        }
+        
         tabelaCasos = new TableModelCaso(casos);
         controller = new CBRController(this, tabelaCasos);
         
@@ -44,26 +51,86 @@ public class MainGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroupTipoQuery = new javax.swing.ButtonGroup();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        jPanelNovaQuery = new javax.swing.JPanel();
+        jPanelTipoQuery = new javax.swing.JPanel();
+        jRadioButtonQueryRetruco = new javax.swing.JRadioButton();
+        jRadioButtonQueryVale4 = new javax.swing.JRadioButton();
+        jRadioButtonQueryTruco = new javax.swing.JRadioButton();
+        jRadioButtonQueryEnvido = new javax.swing.JRadioButton();
+        jRadioButtonQueryGeral = new javax.swing.JRadioButton();
+        jPanelTodosOsCasos = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableTodosOsCasos = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1393, Short.MAX_VALUE)
+        jPanelTipoQuery.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo de Consulta", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+
+        buttonGroupTipoQuery.add(jRadioButtonQueryRetruco);
+        jRadioButtonQueryRetruco.setText("Retruco");
+
+        buttonGroupTipoQuery.add(jRadioButtonQueryVale4);
+        jRadioButtonQueryVale4.setText("Vale Quatro");
+        jRadioButtonQueryVale4.setToolTipText("");
+
+        buttonGroupTipoQuery.add(jRadioButtonQueryTruco);
+        jRadioButtonQueryTruco.setText("Truco");
+
+        buttonGroupTipoQuery.add(jRadioButtonQueryEnvido);
+        jRadioButtonQueryEnvido.setText("Envido");
+
+        buttonGroupTipoQuery.add(jRadioButtonQueryGeral);
+        jRadioButtonQueryGeral.setSelected(true);
+        jRadioButtonQueryGeral.setText("Geral");
+
+        javax.swing.GroupLayout jPanelTipoQueryLayout = new javax.swing.GroupLayout(jPanelTipoQuery);
+        jPanelTipoQuery.setLayout(jPanelTipoQueryLayout);
+        jPanelTipoQueryLayout.setHorizontalGroup(
+            jPanelTipoQueryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelTipoQueryLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelTipoQueryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButtonQueryTruco)
+                    .addComponent(jRadioButtonQueryRetruco)
+                    .addComponent(jRadioButtonQueryVale4)
+                    .addComponent(jRadioButtonQueryGeral)
+                    .addComponent(jRadioButtonQueryEnvido))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 586, Short.MAX_VALUE)
+        jPanelTipoQueryLayout.setVerticalGroup(
+            jPanelTipoQueryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelTipoQueryLayout.createSequentialGroup()
+                .addComponent(jRadioButtonQueryGeral)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonQueryEnvido)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonQueryTruco)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonQueryRetruco)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonQueryVale4))
         );
 
-        jTabbedPane1.addTab("Nova Consulta", jPanel1);
+        javax.swing.GroupLayout jPanelNovaQueryLayout = new javax.swing.GroupLayout(jPanelNovaQuery);
+        jPanelNovaQuery.setLayout(jPanelNovaQueryLayout);
+        jPanelNovaQueryLayout.setHorizontalGroup(
+            jPanelNovaQueryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelNovaQueryLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanelTipoQuery, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(1276, Short.MAX_VALUE))
+        );
+        jPanelNovaQueryLayout.setVerticalGroup(
+            jPanelNovaQueryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelNovaQueryLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanelTipoQuery, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(437, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Nova Consulta", jPanelNovaQuery);
 
         jTableTodosOsCasos.setModel(tabelaCasos);
         jTableTodosOsCasos.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
@@ -74,24 +141,24 @@ public class MainGUI extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTableTodosOsCasos);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanelTodosOsCasosLayout = new javax.swing.GroupLayout(jPanelTodosOsCasos);
+        jPanelTodosOsCasos.setLayout(jPanelTodosOsCasosLayout);
+        jPanelTodosOsCasosLayout.setHorizontalGroup(
+            jPanelTodosOsCasosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelTodosOsCasosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1373, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        jPanelTodosOsCasosLayout.setVerticalGroup(
+            jPanelTodosOsCasosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelTodosOsCasosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 564, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Todos os Casos", jPanel2);
+        jTabbedPane1.addTab("Todos os Casos", jPanelTodosOsCasos);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -151,8 +218,15 @@ public class MainGUI extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.ButtonGroup buttonGroupTipoQuery;
+    private javax.swing.JPanel jPanelNovaQuery;
+    private javax.swing.JPanel jPanelTipoQuery;
+    private javax.swing.JPanel jPanelTodosOsCasos;
+    private javax.swing.JRadioButton jRadioButtonQueryEnvido;
+    private javax.swing.JRadioButton jRadioButtonQueryGeral;
+    private javax.swing.JRadioButton jRadioButtonQueryRetruco;
+    private javax.swing.JRadioButton jRadioButtonQueryTruco;
+    private javax.swing.JRadioButton jRadioButtonQueryVale4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTableTodosOsCasos;

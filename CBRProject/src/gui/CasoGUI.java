@@ -5,6 +5,7 @@
  */
 package gui;
 
+import javax.swing.UIManager;
 import representation.DescCaso;
 
 /**
@@ -20,6 +21,12 @@ public class CasoGUI extends javax.swing.JFrame {
      * @param descCaso
      */
     public CasoGUI(DescCaso descCaso) {
+        
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+        }
+        
         this.descCaso = descCaso;
         
         initComponents();
