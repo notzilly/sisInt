@@ -6,10 +6,8 @@
 package gui;
 
 import controller.CBRController;
-import java.util.LinkedList;
 import javax.swing.JTable;
 import javax.swing.UIManager;
-import jcolibri.cbrcore.CBRCase;
 import representation.TableModelCaso;
 
 /**
@@ -23,17 +21,18 @@ public class MainGUI extends javax.swing.JFrame {
     
     /**
      * Creates new form MainGUI
-     * @param casos
+     * @param tabelaCasos
+     * @param controller
      */
-    public MainGUI(LinkedList<CBRCase> casos) {
+    public MainGUI(TableModelCaso tabelaCasos, CBRController controller) {
         
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {
         }
         
-        tabelaCasos = new TableModelCaso(casos);
-        controller = new CBRController(this, tabelaCasos);
+        this.tabelaCasos = tabelaCasos;
+        this.controller = controller;
         
         initComponents();
     }

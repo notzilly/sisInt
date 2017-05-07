@@ -1,11 +1,10 @@
 package cbr;
 
-import gui.MainGUI;
+import controller.CBRController;
 import java.util.Collection;
 import java.util.LinkedList;
 
 import javax.annotation.Generated;
-import javax.swing.JFrame;
 
 import jcolibri.cbraplications.StandardCBRApplication;
 import jcolibri.cbrcore.Attribute;
@@ -254,14 +253,13 @@ public class CBRApplication implements StandardCBRApplication {
 
                     CBRQuery query = new CBRQuery();
                     query.setDescription(new DescCaso());
-                    
-                    MainGUI AppGUI = new MainGUI(cbrApp.retornaCasos());
-                    AppGUI.setVisible(true);
-                    AppGUI.setExtendedState(AppGUI.getExtendedState() | JFrame.MAXIMIZED_BOTH);
+                                      
+                    CBRController c = new CBRController(cbrApp.retornaCasos());                  
 
 //                    jcolibri.method.gui.formFilling.ObtainQueryWithFormMethod.obtainQueryWithoutInitialValues(query, null, null);
-//			cbrApp.cycle(query);
-//			cbrApp.postCycle();
+                    
+                    cbrApp.cycle(query);
+                    cbrApp.postCycle();
 			
 		} catch (ExecutionException e) {
 			e.printStackTrace();
