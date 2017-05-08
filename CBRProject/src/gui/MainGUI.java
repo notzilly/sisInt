@@ -214,6 +214,10 @@ public class MainGUI extends javax.swing.JFrame {
         return jComboBoxR3PediuValeQuatro;
     }
     
+    public JPanel getjPanelDadosVoltas(){
+        return jPanelDadosVolta;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -222,6 +226,7 @@ public class MainGUI extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         buttonGroupTipoQuery = new javax.swing.ButtonGroup();
         buttonGroupRodada = new javax.swing.ButtonGroup();
@@ -389,6 +394,7 @@ public class MainGUI extends javax.swing.JFrame {
 
         buttonGroupRodada.add(jRadioButtonRodada1);
         jRadioButtonRodada1.setText("Rodada 1");
+        jRadioButtonRodada1.setEnabled(false);
         jRadioButtonRodada1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButtonRodadaActionPerformed(evt);
@@ -397,9 +403,21 @@ public class MainGUI extends javax.swing.JFrame {
 
         buttonGroupRodada.add(jRadioButtonRodada2);
         jRadioButtonRodada2.setText("Rodada 2");
+        jRadioButtonRodada2.setEnabled(false);
+        jRadioButtonRodada2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonRodadaActionPerformed(evt);
+            }
+        });
 
         buttonGroupRodada.add(jRadioButtonRodada3);
         jRadioButtonRodada3.setText("Rodada 3");
+        jRadioButtonRodada3.setEnabled(false);
+        jRadioButtonRodada3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonRodadaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelRodadaLayout = new javax.swing.GroupLayout(jPanelRodada);
         jPanelRodada.setLayout(jPanelRodadaLayout);
@@ -430,24 +448,29 @@ public class MainGUI extends javax.swing.JFrame {
 
         jComboBoxCarta1.setMaximumRowCount(15);
         jComboBoxCarta1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14" }));
+        jComboBoxCarta1.setEnabled(false);
 
         jLabelCarta2.setText("Carta 2");
 
         jComboBoxCarta2.setMaximumRowCount(15);
         jComboBoxCarta2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14" }));
+        jComboBoxCarta2.setEnabled(false);
 
         jLabelCarta3.setText("Carta 3");
 
         jComboBoxCarta3.setMaximumRowCount(15);
         jComboBoxCarta3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14" }));
+        jComboBoxCarta3.setEnabled(false);
 
         jLabelGanheiEnvido.setText("Ganhei Envido");
 
         jLabelGanheiVolta.setText("Ganhei Volta");
 
         jComboBoxGanheiEnvido.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxGanheiEnvido.setEnabled(false);
 
         jComboBoxGanheiVolta.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não", "Sim" }));
+        jComboBoxGanheiVolta.setEnabled(false);
 
         jLabelPontosMeus.setText("Pontos Meus");
 
@@ -455,11 +478,16 @@ public class MainGUI extends javax.swing.JFrame {
 
         jComboBoxPontosMeus.setMaximumRowCount(15);
         jComboBoxPontosMeus.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23" }));
+        jComboBoxPontosMeus.setEnabled(false);
 
         jComboBoxPontosAdv.setMaximumRowCount(15);
         jComboBoxPontosAdv.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23" }));
+        jComboBoxPontosAdv.setEnabled(false);
 
         jPanelRodada1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Rodada 1", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, buttonGroupRodada, org.jdesktop.beansbinding.ELProperty.create("Rodada1"), jPanelRodada1, org.jdesktop.beansbinding.BeanProperty.create("name"));
+        bindingGroup.addBinding(binding);
 
         jLabelR1CartaMinha.setText("Carta Minha");
 
@@ -483,25 +511,35 @@ public class MainGUI extends javax.swing.JFrame {
 
         jComboBoxR1CartaMinha.setMaximumRowCount(15);
         jComboBoxR1CartaMinha.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14" }));
+        jComboBoxR1CartaMinha.setEnabled(false);
 
         jComboBoxR1CartaAdv.setMaximumRowCount(15);
         jComboBoxR1CartaAdv.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14" }));
+        jComboBoxR1CartaAdv.setEnabled(false);
 
         jComboBoxR1PediuEnvido.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxR1PediuEnvido.setEnabled(false);
 
         jComboBoxR1AceitouEnvido.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxR1AceitouEnvido.setEnabled(false);
 
         jComboBoxR1AceitouRetruco.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxR1AceitouRetruco.setEnabled(false);
 
         jComboBoxR1PediuRetruco.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxR1PediuRetruco.setEnabled(false);
 
         jComboBoxR1PediuTruco.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxR1PediuTruco.setEnabled(false);
 
         jComboBoxR1AceitouValeQuatro.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxR1AceitouValeQuatro.setEnabled(false);
 
         jComboBoxR1AceitouTruco.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxR1AceitouTruco.setEnabled(false);
 
         jComboBoxR1PediuValeQuatro.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxR1PediuValeQuatro.setEnabled(false);
 
         javax.swing.GroupLayout jPanelRodada1Layout = new javax.swing.GroupLayout(jPanelRodada1);
         jPanelRodada1.setLayout(jPanelRodada1Layout);
@@ -592,6 +630,9 @@ public class MainGUI extends javax.swing.JFrame {
 
         jPanelRodada2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Rodada 2", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
 
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, buttonGroupRodada, org.jdesktop.beansbinding.ELProperty.create("Rodada2"), jPanelRodada2, org.jdesktop.beansbinding.BeanProperty.create("name"));
+        bindingGroup.addBinding(binding);
+
         jLabelR1CartaMinha1.setText("Carta Minha");
 
         jLabelR1CartaAdv1.setText("Carta Adv");
@@ -610,21 +651,29 @@ public class MainGUI extends javax.swing.JFrame {
 
         jComboBoxR2CartaMinha.setMaximumRowCount(15);
         jComboBoxR2CartaMinha.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14" }));
+        jComboBoxR2CartaMinha.setEnabled(false);
 
         jComboBoxR2CartaAdv.setMaximumRowCount(15);
         jComboBoxR2CartaAdv.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14" }));
+        jComboBoxR2CartaAdv.setEnabled(false);
 
         jComboBoxR2AceitouRetruco.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxR2AceitouRetruco.setEnabled(false);
 
         jComboBoxR2PediuRetruco.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxR2PediuRetruco.setEnabled(false);
 
         jComboBoxR2PediuTruco.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxR2PediuTruco.setEnabled(false);
 
         jComboBoxR2AceitouValeQuatro.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxR2AceitouValeQuatro.setEnabled(false);
 
         jComboBoxR2AceitouTruco.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxR2AceitouTruco.setEnabled(false);
 
         jComboBoxR2PediuValeQuatro.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxR2PediuValeQuatro.setEnabled(false);
 
         javax.swing.GroupLayout jPanelRodada2Layout = new javax.swing.GroupLayout(jPanelRodada2);
         jPanelRodada2.setLayout(jPanelRodada2Layout);
@@ -701,6 +750,9 @@ public class MainGUI extends javax.swing.JFrame {
 
         jPanelRodada3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Rodada 3", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
 
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, buttonGroupRodada, org.jdesktop.beansbinding.ELProperty.create("Rodada3"), jPanelRodada3, org.jdesktop.beansbinding.BeanProperty.create("name"));
+        bindingGroup.addBinding(binding);
+
         jLabelR1CartaMinha2.setText("Carta Minha");
 
         jLabelR1CartaAdv2.setText("Carta Adv");
@@ -719,21 +771,29 @@ public class MainGUI extends javax.swing.JFrame {
 
         jComboBoxR3CartaMinha.setMaximumRowCount(15);
         jComboBoxR3CartaMinha.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14" }));
+        jComboBoxR3CartaMinha.setEnabled(false);
 
         jComboBoxR3CartaAdv.setMaximumRowCount(15);
         jComboBoxR3CartaAdv.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14" }));
+        jComboBoxR3CartaAdv.setEnabled(false);
 
         jComboBoxR3AceitouRetruco.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxR3AceitouRetruco.setEnabled(false);
 
         jComboBoxR3PediuRetruco.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxR3PediuRetruco.setEnabled(false);
 
         jComboBoxR3PediuTruco.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxR3PediuTruco.setEnabled(false);
 
         jComboBoxR3AceitouValeQuatro.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxR3AceitouValeQuatro.setEnabled(false);
 
         jComboBoxR3AceitouTruco.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxR3AceitouTruco.setEnabled(false);
 
         jComboBoxR3PediuValeQuatro.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Não teve", "Não", "Sim" }));
+        jComboBoxR3PediuValeQuatro.setEnabled(false);
 
         javax.swing.GroupLayout jPanelRodada3Layout = new javax.swing.GroupLayout(jPanelRodada3);
         jPanelRodada3.setLayout(jPanelRodada3Layout);
@@ -966,6 +1026,8 @@ public class MainGUI extends javax.swing.JFrame {
                 .addGap(0, 0, 0))
         );
 
+        bindingGroup.bind();
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1109,5 +1171,6 @@ public class MainGUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTableTodosOsCasos;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

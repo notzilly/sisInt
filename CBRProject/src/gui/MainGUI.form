@@ -231,6 +231,7 @@
                       <ComponentRef name="buttonGroupRodada"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Rodada 1"/>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonRodadaActionPerformed"/>
@@ -242,7 +243,11 @@
                       <ComponentRef name="buttonGroupRodada"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Rodada 2"/>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonRodadaActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButtonRodada3">
                   <Properties>
@@ -250,7 +255,11 @@
                       <ComponentRef name="buttonGroupRodada"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Rodada 3"/>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonRodadaActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -395,6 +404,7 @@
                         <StringItem index="14" value="14"/>
                       </StringArray>
                     </Property>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabelCarta2">
@@ -424,6 +434,7 @@
                         <StringItem index="14" value="14"/>
                       </StringArray>
                     </Property>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabelCarta3">
@@ -453,6 +464,7 @@
                         <StringItem index="14" value="14"/>
                       </StringArray>
                     </Property>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabelGanheiEnvido">
@@ -474,6 +486,7 @@
                         <StringItem index="2" value="Sim"/>
                       </StringArray>
                     </Property>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBoxGanheiVolta">
@@ -484,6 +497,7 @@
                         <StringItem index="1" value="Sim"/>
                       </StringArray>
                     </Property>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabelPontosMeus">
@@ -527,6 +541,7 @@
                         <StringItem index="23" value="23"/>
                       </StringArray>
                     </Property>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBoxPontosAdv">
@@ -560,6 +575,7 @@
                         <StringItem index="23" value="23"/>
                       </StringArray>
                     </Property>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                 </Component>
                 <Container class="javax.swing.JPanel" name="jPanelRodada1">
@@ -570,6 +586,9 @@
                       </Border>
                     </Property>
                   </Properties>
+                  <BindingProperties>
+                    <BindingProperty name="name" source="buttonGroupRodada" sourcePath="Rodada1" target="jPanelRodada1" targetPath="name" updateStrategy="0" immediately="false"/>
+                  </BindingProperties>
 
                   <Layout>
                     <DimensionLayout dim="0">
@@ -753,6 +772,7 @@
                             <StringItem index="14" value="14"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR1CartaAdv">
@@ -777,6 +797,7 @@
                             <StringItem index="14" value="14"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR1PediuEnvido">
@@ -788,6 +809,7 @@
                             <StringItem index="2" value="Sim"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR1AceitouEnvido">
@@ -799,6 +821,7 @@
                             <StringItem index="2" value="Sim"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR1AceitouRetruco">
@@ -810,6 +833,7 @@
                             <StringItem index="2" value="Sim"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR1PediuRetruco">
@@ -821,6 +845,7 @@
                             <StringItem index="2" value="Sim"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR1PediuTruco">
@@ -832,6 +857,7 @@
                             <StringItem index="2" value="Sim"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR1AceitouValeQuatro">
@@ -843,6 +869,7 @@
                             <StringItem index="2" value="Sim"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR1AceitouTruco">
@@ -854,6 +881,7 @@
                             <StringItem index="2" value="Sim"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR1PediuValeQuatro">
@@ -865,6 +893,7 @@
                             <StringItem index="2" value="Sim"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -877,6 +906,9 @@
                       </Border>
                     </Property>
                   </Properties>
+                  <BindingProperties>
+                    <BindingProperty name="name" source="buttonGroupRodada" sourcePath="Rodada2" target="jPanelRodada2" targetPath="name" updateStrategy="0" immediately="false"/>
+                  </BindingProperties>
 
                   <Layout>
                     <DimensionLayout dim="0">
@@ -1033,6 +1065,7 @@
                             <StringItem index="14" value="14"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR2CartaAdv">
@@ -1057,6 +1090,7 @@
                             <StringItem index="14" value="14"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR2AceitouRetruco">
@@ -1068,6 +1102,7 @@
                             <StringItem index="2" value="Sim"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR2PediuRetruco">
@@ -1079,6 +1114,7 @@
                             <StringItem index="2" value="Sim"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR2PediuTruco">
@@ -1090,6 +1126,7 @@
                             <StringItem index="2" value="Sim"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR2AceitouValeQuatro">
@@ -1101,6 +1138,7 @@
                             <StringItem index="2" value="Sim"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR2AceitouTruco">
@@ -1112,6 +1150,7 @@
                             <StringItem index="2" value="Sim"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR2PediuValeQuatro">
@@ -1123,6 +1162,7 @@
                             <StringItem index="2" value="Sim"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -1135,6 +1175,9 @@
                       </Border>
                     </Property>
                   </Properties>
+                  <BindingProperties>
+                    <BindingProperty name="name" source="buttonGroupRodada" sourcePath="Rodada3" target="jPanelRodada3" targetPath="name" updateStrategy="0" immediately="false"/>
+                  </BindingProperties>
 
                   <Layout>
                     <DimensionLayout dim="0">
@@ -1291,6 +1334,7 @@
                             <StringItem index="14" value="14"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR3CartaAdv">
@@ -1315,6 +1359,7 @@
                             <StringItem index="14" value="14"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR3AceitouRetruco">
@@ -1326,6 +1371,7 @@
                             <StringItem index="2" value="Sim"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR3PediuRetruco">
@@ -1337,6 +1383,7 @@
                             <StringItem index="2" value="Sim"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR3PediuTruco">
@@ -1348,6 +1395,7 @@
                             <StringItem index="2" value="Sim"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR3AceitouValeQuatro">
@@ -1359,6 +1407,7 @@
                             <StringItem index="2" value="Sim"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR3AceitouTruco">
@@ -1370,6 +1419,7 @@
                             <StringItem index="2" value="Sim"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBoxR3PediuValeQuatro">
@@ -1381,6 +1431,7 @@
                             <StringItem index="2" value="Sim"/>
                           </StringArray>
                         </Property>
+                        <Property name="enabled" type="boolean" value="false"/>
                       </Properties>
                     </Component>
                   </SubComponents>
