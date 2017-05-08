@@ -7,12 +7,15 @@ import java.awt.Component;
 import java.awt.Container;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.embed.swing.JFXPanel;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import jcolibri.cbrcore.CBRQuery;
 import jcolibri.exception.ExecutionException;
+import jcolibri.method.retrieve.NNretrieval.NNConfig;
 import representation.DescCaso;
 import representation.TableModelCaso;
 
@@ -47,6 +50,23 @@ public class CBRController {
         this.view.setExtendedState(this.view.getExtendedState() | JFrame.MAXIMIZED_BOTH);
     }  
     
+    public void disableAll(Container evt){
+        for(Component c : evt.getComponents()){
+                if(c instanceof JRadioButton){
+                    c.setEnabled(false);
+                }
+                else if(c instanceof JComboBox){
+                    c.setEnabled(false);
+                    ((JComboBox)c).setSelectedIndex(0);
+                }
+                else{
+                    if(c instanceof Container){
+                        disableAll((Container)c);
+                    }
+                }                    
+            }   
+    }
+    
     public void enableAll(Container evt){
         for(Component c : evt.getComponents()){
                 if(c instanceof JRadioButton){
@@ -62,6 +82,20 @@ public class CBRController {
                     }
                 }                    
             }   
+    }
+    
+    public void disableEnvido(Container cont){
+        //Disable Fields
+        for(Component c : cont.getComponents()){
+            if(c instanceof JComboBox){ 
+                c.setEnabled(false);
+            }
+            else{
+                if(c instanceof Container){
+                    disableEnvido((Container)c);
+                }
+            }
+        }        
     }
     
     public void rodarConsulta() {
@@ -108,6 +142,56 @@ public class CBRController {
         dc.setR3PediuValeQuatro((Integer) view.getjComboBoxR3PediuValeQuatro().getSelectedIndex());
         dc.setR3AceitouValeQuatro((Integer) view.getjComboBoxR3AceitouValeQuatro().getSelectedIndex());
         
+        NNConfig cnf;
+        //Geral
+        if(view.getjRadioButtonQueryGeral().isSelected()){
+            
+            if(view.getjRadioButtonRodada1().isSelected()){
+                cnf = cbrApp.getSimilarityGeralR1();
+            }
+            else if(view.getjRadioButtonRodada2().isSelected()){
+                cnf = cbrApp.getSimilarityGeralR2();
+            }
+            else if(view.getjRadioButtonRodada3().isSelected()){
+                cnf = cbrApp.getSimilarityGeralR3();
+            }
+        }
+        else if(view.getjRadioButtonQueryEnvido().isSelected()){
+            cnf = cbrApp.getSimilarityEnvido();
+        }
+        else if(view.getjRadioButtonQueryTruco().isSelected()){
+            if(view.getjRadioButtonRodada1().isSelected()){
+                cnf = cbrApp.getSimilarityTrucoR1();
+            }
+            else if(view.getjRadioButtonRodada2().isSelected()){
+                cnf = cbrApp.getSimilarityTrucoR2();
+            }
+            else if(view.getjRadioButtonRodada3().isSelected()){
+                cnf = cbrApp.getSimilarityTrucoR3();
+            }
+        }
+        else if(view.getjRadioButtonQueryRetruco().isSelected()){
+            if(view.getjRadioButtonRodada1().isSelected()){
+                cnf = cbrApp.getSimilarityRetrucoR1();
+            }
+            else if(view.getjRadioButtonRodada2().isSelected()){
+                cnf = cbrApp.getSimilarityRetrucoR2();
+            }
+            else if(view.getjRadioButtonRodada3().isSelected()){
+                cnf = cbrApp.getSimilarityRetrucoR3();
+            }
+        }
+        else if(view.getjRadioButtonQueryValeQuatro().isSelected()){
+            if(view.getjRadioButtonRodada1().isSelected()){
+                cnf = cbrApp.getSimilarityValeQuatroR1();
+            }
+            else if(view.getjRadioButtonRodada2().isSelected()){
+                cnf = cbrApp.getSimilarityValeQuatroR2();
+            }
+            else if(view.getjRadioButtonRodada3().isSelected()){
+                cnf = cbrApp.getSimilarityValeQuatroR3();
+            }
+        }
         
         CBRQuery query = new CBRQuery();
 
@@ -126,26 +210,178 @@ public class CBRController {
 
     public void trocaCategoria(java.awt.event.ActionEvent evt){
         if(evt.getSource() == view.getjRadioButtonQueryGeral()){
-            //JOptionPane.showMessageDialog(view, "Clicou no radio button geral");
-            enableAll(view.getjPanelNovaQuery());
+            disableAll(view.getjPanelDadosVoltas());
+            view.getjRadioButtonRodada1().setEnabled(true);
+            view.getjRadioButtonRodada2().setEnabled(true);
+            view.getjRadioButtonRodada3().setEnabled(true);
         }
         else if(evt.getSource() == view.getjRadioButtonQueryEnvido()){
+            disableEnvido(view.getjPanelNovaQuery());
+            view.getjRadioButtonRodada1().setEnabled(false);
             view.getjRadioButtonRodada2().setEnabled(false);
             view.getjRadioButtonRodada3().setEnabled(false);
-            view.getjComboBoxGanheiVolta().setEnabled(false);
-            view.getjComboBoxPontosAdv().setEnabled(false);
-            view.getjComboBoxPontosMeus().setEnabled(false);
+            view.getjComboBoxCarta1().setEnabled(true);
+            view.getjComboBoxCarta2().setEnabled(true);
+            view.getjComboBoxCarta3().setEnabled(true);
+            view.getjComboBoxGanheiEnvido().setEnabled(true);
+            view.getjComboBoxR1AceitouEnvido().setEnabled(true);
+            view.getjComboBoxR1PediuEnvido().setEnabled(true);
             view.getjComboBoxGanheiEnvido().setSelectedIndex(2);
+        }
+        else if(evt.getSource() == view.getjRadioButtonQueryTruco()){
+            enableAll(view.getjPanelNovaQuery());
+            disableAll(view.getjPanelDadosVoltas());
+            view.getjComboBoxGanheiEnvido().setEnabled(false);
+            view.getjComboBoxR1AceitouRetruco().setEnabled(false);
+            view.getjComboBoxR1PediuRetruco().setEnabled(false);
+            view.getjComboBoxR1PediuValeQuatro().setEnabled(false);
+            view.getjComboBoxR1AceitouValeQuatro().setEnabled(false);
+        }
+        else if(evt.getSource() == view.getjRadioButtonQueryRetruco()){
+            enableAll(view.getjPanelNovaQuery());
+            disableAll(view.getjPanelDadosVoltas());
             
         }
         else if(evt.getSource() == view.getjRadioButtonQueryVale4()){
-            JOptionPane.showMessageDialog(view, "Clicou no radio button vale 4");
+            enableAll(view.getjPanelNovaQuery());
+            disableAll(view.getjPanelDadosVoltas());
         }
     }
     
     public void trocaRodada(java.awt.event.ActionEvent evt){
+        enableAll(view.getjPanelNovaQuery());
+        if( view.getjRadioButtonRodada1().isSelected() ){
+            view.getjComboBoxGanheiEnvido().setEnabled(false);
+            view.getjComboBoxR1AceitouEnvido().setEnabled(false);
+            view.getjComboBoxR1AceitouRetruco().setEnabled(false);
+            view.getjComboBoxR1AceitouValeQuatro().setEnabled(false);
+            view.getjComboBoxR1PediuEnvido().setEnabled(false);
+            view.getjComboBoxR1PediuRetruco().setEnabled(false);
+            view.getjComboBoxR1PediuValeQuatro().setEnabled(false);
+        }
+        if( view.getjRadioButtonRodada2().isSelected() ){
+            view.getjComboBoxR1AceitouTruco().setEnabled(false);
+            view.getjComboBoxR1PediuTruco().setEnabled(false);
+            view.getjComboBoxR2AceitouRetruco().setEnabled(false);
+            view.getjComboBoxR2PediuRetruco().setEnabled(false);
+            view.getjComboBoxR2AceitouValeQuatro().setEnabled(false);
+            view.getjComboBoxR2PediuValeQuatro().setEnabled(false);
+            
+            view.getjComboBoxGanheiEnvido().setEnabled(false);
+            view.getjComboBoxR1AceitouEnvido().setEnabled(false);
+            view.getjComboBoxR1AceitouRetruco().setEnabled(false);
+            view.getjComboBoxR1AceitouValeQuatro().setEnabled(false);
+            view.getjComboBoxR1PediuEnvido().setEnabled(false);
+            view.getjComboBoxR1PediuRetruco().setEnabled(false);
+            view.getjComboBoxR1PediuValeQuatro().setEnabled(false);
+        }
+        if( view.getjRadioButtonRodada3().isSelected() ){
+            view.getjComboBoxR3AceitouRetruco().setEnabled(false);
+            view.getjComboBoxR3PediuRetruco().setEnabled(false);
+            view.getjComboBoxR3AceitouValeQuatro().setEnabled(false);
+            view.getjComboBoxR3PediuValeQuatro().setEnabled(false);
+            view.getjComboBoxR2AceitouTruco().setEnabled(false);
+            view.getjComboBoxR2PediuTruco().setEnabled(false);
+            
+            
+            view.getjComboBoxR1AceitouTruco().setEnabled(false);
+            view.getjComboBoxR1PediuTruco().setEnabled(false);
+            view.getjComboBoxR2AceitouRetruco().setEnabled(false);
+            view.getjComboBoxR2PediuRetruco().setEnabled(false);
+            view.getjComboBoxR2AceitouValeQuatro().setEnabled(false);
+            view.getjComboBoxR2PediuValeQuatro().setEnabled(false);
+            
+            view.getjComboBoxGanheiEnvido().setEnabled(false);
+            view.getjComboBoxR1AceitouEnvido().setEnabled(false);
+            view.getjComboBoxR1AceitouRetruco().setEnabled(false);
+            view.getjComboBoxR1AceitouValeQuatro().setEnabled(false);
+            view.getjComboBoxR1PediuEnvido().setEnabled(false);
+            view.getjComboBoxR1PediuRetruco().setEnabled(false);
+            view.getjComboBoxR1PediuValeQuatro().setEnabled(false);
+        }
+        if(view.getjRadioButtonQueryRetruco().isSelected()
+           && evt.getSource() == view.getjRadioButtonRodada1()){
+            view.getjComboBoxR1AceitouRetruco().setEnabled(true);
+            view.getjComboBoxR1PediuRetruco().setEnabled(true);
+        }
+        else if(view.getjRadioButtonQueryRetruco().isSelected()
+           && evt.getSource() == view.getjRadioButtonRodada2()){
+            view.getjComboBoxR2AceitouRetruco().setEnabled(true);
+            view.getjComboBoxR2PediuRetruco().setEnabled(true);
+            view.getjComboBoxR1AceitouTruco().setEnabled(true);
+            view.getjComboBoxR1PediuTruco().setEnabled(true);
+        }
+        else if(view.getjRadioButtonQueryRetruco().isSelected()
+           && evt.getSource() == view.getjRadioButtonRodada3()){
+            view.getjComboBoxR2AceitouTruco().setEnabled(true);
+            view.getjComboBoxR2PediuTruco().setEnabled(true);
+            view.getjComboBoxR1AceitouTruco().setEnabled(true);
+            view.getjComboBoxR1PediuTruco().setEnabled(true);
+            view.getjComboBoxR3AceitouRetruco().setEnabled(true);
+            view.getjComboBoxR3PediuRetruco().setEnabled(true);
+        }
+        if(view.getjRadioButtonQueryVale4().isSelected()
+           && evt.getSource() == view.getjRadioButtonRodada1()){
+            view.getjComboBoxR1AceitouTruco().setEnabled(true);
+            view.getjComboBoxR1PediuTruco().setEnabled(true);
+            view.getjComboBoxR1AceitouRetruco().setEnabled(true);
+            view.getjComboBoxR1PediuRetruco().setEnabled(true);
+            view.getjComboBoxR1AceitouValeQuatro().setEnabled(true);
+            view.getjComboBoxR1PediuValeQuatro().setEnabled(true);
+        }
+        else if(view.getjRadioButtonQueryVale4().isSelected()
+           && evt.getSource() == view.getjRadioButtonRodada2()){
+            view.getjComboBoxR1AceitouTruco().setEnabled(true);
+            view.getjComboBoxR1PediuTruco().setEnabled(true);
+            view.getjComboBoxR1AceitouRetruco().setEnabled(true);
+            view.getjComboBoxR1PediuRetruco().setEnabled(true);
+            
+            view.getjComboBoxR2AceitouTruco().setEnabled(true);
+            view.getjComboBoxR2PediuTruco().setEnabled(true);
+            view.getjComboBoxR2AceitouRetruco().setEnabled(true);
+            view.getjComboBoxR2PediuRetruco().setEnabled(true);            
+            view.getjComboBoxR2AceitouValeQuatro().setEnabled(true);
+            view.getjComboBoxR2PediuValeQuatro().setEnabled(true);
+        }
+        else if(view.getjRadioButtonQueryVale4().isSelected()
+           && evt.getSource() == view.getjRadioButtonRodada3()){
+            view.getjComboBoxR1AceitouTruco().setEnabled(true);
+            view.getjComboBoxR1PediuTruco().setEnabled(true);
+            view.getjComboBoxR1AceitouRetruco().setEnabled(true);
+            view.getjComboBoxR1PediuRetruco().setEnabled(true);            
+            view.getjComboBoxR2AceitouTruco().setEnabled(true);
+            view.getjComboBoxR2PediuTruco().setEnabled(true);
+            view.getjComboBoxR2AceitouRetruco().setEnabled(true);
+            view.getjComboBoxR2PediuRetruco().setEnabled(true);            
+            
+            view.getjComboBoxR3AceitouRetruco().setEnabled(true);
+            view.getjComboBoxR3PediuRetruco().setEnabled(true);
+            view.getjComboBoxR3AceitouValeQuatro().setEnabled(true);
+            view.getjComboBoxR3PediuValeQuatro().setEnabled(true);
+        }
         if(evt.getSource() == view.getjRadioButtonRodada1()){
-            JOptionPane.showMessageDialog(view, "Clicou no radio button geral");
+            for(Component c : view.getjPanelDadosVoltas().getComponents()){
+                if(c instanceof JPanel){
+                    if( !((JPanel)c).getName().equals("Rodada1") ){
+                       for(Component d :((JPanel)c).getComponents()){
+                           if(d instanceof JComboBox)
+                               d.setEnabled(false);
+                       }
+                    }
+                }
+            }
+        }
+        if(evt.getSource() == view.getjRadioButtonRodada2()){
+            for(Component c : view.getjPanelDadosVoltas().getComponents()){
+                if(c instanceof JPanel){
+                    if( ((JPanel)c).getName().equals("Rodada3") ){
+                       for(Component d :((JPanel)c).getComponents()){
+                           if(d instanceof JComboBox)
+                               d.setEnabled(false);
+                       }
+                    }
+                }
+            }
         }
     }
     
