@@ -4,6 +4,8 @@
   <NonVisualComponents>
     <Component class="javax.swing.ButtonGroup" name="buttonGroupTipoQuery">
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroupRodada">
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -27,7 +29,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
               <Component id="jTabbedPane1" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
           </Group>
@@ -35,7 +37,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
               <Component id="jTabbedPane1" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
           </Group>
@@ -59,10 +61,14 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanelTipoQuery" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="1276" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanelRodada" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jPanelDadosVolta" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="178" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -70,8 +76,14 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanelTipoQuery" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="437" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jPanelRodada" max="32767" attributes="0"/>
+                              <Component id="jPanelTipoQuery" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="jPanelDadosVolta" min="-2" pref="342" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="325" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -126,6 +138,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Retruco"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonCategoriaActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButtonQueryVale4">
                   <Properties>
@@ -135,6 +150,9 @@
                     <Property name="text" type="java.lang.String" value="Vale Quatro"/>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonCategoriaActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButtonQueryTruco">
                   <Properties>
@@ -143,6 +161,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Truco"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonCategoriaActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButtonQueryEnvido">
                   <Properties>
@@ -151,15 +172,1226 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Envido"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonCategoriaActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButtonQueryGeral">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="buttonGroupTipoQuery"/>
                     </Property>
-                    <Property name="selected" type="boolean" value="true"/>
                     <Property name="text" type="java.lang.String" value="Geral"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonCategoriaActionPerformed"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanelRodada">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder justification="1" title="Rodada"/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jRadioButtonRodada1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButtonRodada3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jRadioButtonRodada2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jRadioButtonRodada1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioButtonRodada2" max="32767" attributes="0"/>
+                          <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioButtonRodada3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JRadioButton" name="jRadioButtonRodada1">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroupRodada"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Rodada 1"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonRodadaActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButtonRodada2">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroupRodada"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Rodada 2"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JRadioButton" name="jRadioButtonRodada3">
+                  <Properties>
+                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                      <ComponentRef name="buttonGroupRodada"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Rodada 3"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanelDadosVolta">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder justification="1" title="Consulta"/>
+                  </Border>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="10" style="0"/>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabelCarta1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelCarta2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelCarta3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelGanheiEnvido" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelGanheiVolta" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelPontosMeus" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelPontosAdv" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jComboBoxPontosAdv" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxPontosMeus" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxGanheiVolta" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxGanheiEnvido" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxCarta3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxCarta2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBoxCarta1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="jPanelRodada1" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jPanelRodada2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jPanelRodada3" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jButtonRodarConsulta" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabelCarta1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxCarta1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabelCarta2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxCarta2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabelCarta3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxCarta3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabelGanheiEnvido" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxGanheiEnvido" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabelGanheiVolta" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxGanheiVolta" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabelPontosMeus" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxPontosMeus" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabelPontosAdv" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxPontosAdv" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="jPanelRodada2" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jPanelRodada3" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="32767" attributes="0"/>
+                                      <Component id="jButtonRodarConsulta" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jPanelRodada1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabelCarta1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Carta 1"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBoxCarta1">
+                  <Properties>
+                    <Property name="maximumRowCount" type="int" value="15"/>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="15">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                        <StringItem index="4" value="4"/>
+                        <StringItem index="5" value="5"/>
+                        <StringItem index="6" value="6"/>
+                        <StringItem index="7" value="7"/>
+                        <StringItem index="8" value="8"/>
+                        <StringItem index="9" value="9"/>
+                        <StringItem index="10" value="10"/>
+                        <StringItem index="11" value="11"/>
+                        <StringItem index="12" value="12"/>
+                        <StringItem index="13" value="13"/>
+                        <StringItem index="14" value="14"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelCarta2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Carta 2"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBoxCarta2">
+                  <Properties>
+                    <Property name="maximumRowCount" type="int" value="15"/>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="15">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                        <StringItem index="4" value="4"/>
+                        <StringItem index="5" value="5"/>
+                        <StringItem index="6" value="6"/>
+                        <StringItem index="7" value="7"/>
+                        <StringItem index="8" value="8"/>
+                        <StringItem index="9" value="9"/>
+                        <StringItem index="10" value="10"/>
+                        <StringItem index="11" value="11"/>
+                        <StringItem index="12" value="12"/>
+                        <StringItem index="13" value="13"/>
+                        <StringItem index="14" value="14"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelCarta3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Carta 3"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBoxCarta3">
+                  <Properties>
+                    <Property name="maximumRowCount" type="int" value="15"/>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="15">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                        <StringItem index="4" value="4"/>
+                        <StringItem index="5" value="5"/>
+                        <StringItem index="6" value="6"/>
+                        <StringItem index="7" value="7"/>
+                        <StringItem index="8" value="8"/>
+                        <StringItem index="9" value="9"/>
+                        <StringItem index="10" value="10"/>
+                        <StringItem index="11" value="11"/>
+                        <StringItem index="12" value="12"/>
+                        <StringItem index="13" value="13"/>
+                        <StringItem index="14" value="14"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelGanheiEnvido">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ganhei Envido"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelGanheiVolta">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ganhei Volta"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBoxGanheiEnvido">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="3">
+                        <StringItem index="0" value="N&#xe3;o teve"/>
+                        <StringItem index="1" value="N&#xe3;o"/>
+                        <StringItem index="2" value="Sim"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBoxGanheiVolta">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="2">
+                        <StringItem index="0" value="N&#xe3;o"/>
+                        <StringItem index="1" value="Sim"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelPontosMeus">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Pontos Meus"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabelPontosAdv">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Pontos Adv"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBoxPontosMeus">
+                  <Properties>
+                    <Property name="maximumRowCount" type="int" value="15"/>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="24">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                        <StringItem index="4" value="4"/>
+                        <StringItem index="5" value="5"/>
+                        <StringItem index="6" value="6"/>
+                        <StringItem index="7" value="7"/>
+                        <StringItem index="8" value="8"/>
+                        <StringItem index="9" value="9"/>
+                        <StringItem index="10" value="10"/>
+                        <StringItem index="11" value="11"/>
+                        <StringItem index="12" value="12"/>
+                        <StringItem index="13" value="13"/>
+                        <StringItem index="14" value="14"/>
+                        <StringItem index="15" value="15"/>
+                        <StringItem index="16" value="16"/>
+                        <StringItem index="17" value="17"/>
+                        <StringItem index="18" value="18"/>
+                        <StringItem index="19" value="19"/>
+                        <StringItem index="20" value="20"/>
+                        <StringItem index="21" value="21"/>
+                        <StringItem index="22" value="22"/>
+                        <StringItem index="23" value="23"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBoxPontosAdv">
+                  <Properties>
+                    <Property name="maximumRowCount" type="int" value="15"/>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="24">
+                        <StringItem index="0" value="0"/>
+                        <StringItem index="1" value="1"/>
+                        <StringItem index="2" value="2"/>
+                        <StringItem index="3" value="3"/>
+                        <StringItem index="4" value="4"/>
+                        <StringItem index="5" value="5"/>
+                        <StringItem index="6" value="6"/>
+                        <StringItem index="7" value="7"/>
+                        <StringItem index="8" value="8"/>
+                        <StringItem index="9" value="9"/>
+                        <StringItem index="10" value="10"/>
+                        <StringItem index="11" value="11"/>
+                        <StringItem index="12" value="12"/>
+                        <StringItem index="13" value="13"/>
+                        <StringItem index="14" value="14"/>
+                        <StringItem index="15" value="15"/>
+                        <StringItem index="16" value="16"/>
+                        <StringItem index="17" value="17"/>
+                        <StringItem index="18" value="18"/>
+                        <StringItem index="19" value="19"/>
+                        <StringItem index="20" value="20"/>
+                        <StringItem index="21" value="21"/>
+                        <StringItem index="22" value="22"/>
+                        <StringItem index="23" value="23"/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Container class="javax.swing.JPanel" name="jPanelRodada1">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder justification="1" title="Rodada 1"/>
+                      </Border>
+                    </Property>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabelR1CartaAdv" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="jComboBoxR1CartaAdv" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabelR1CartaMinha" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace pref="80" max="32767" attributes="0"/>
+                                          <Component id="jComboBoxR1CartaMinha" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabelR1PediuEnvido" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxR1PediuEnvido" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabelR1AceitouEnvido" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelR1PediuTruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelR1AceitouTruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelR1PediuRetruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelR1AceitouRetruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelR1PediuValeQuatro" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jComboBoxR1PediuValeQuatro" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxR1AceitouRetruco" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxR1PediuRetruco" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxR1AceitouTruco" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxR1PediuTruco" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxR1AceitouEnvido" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabelR1AceitouValeQuatro" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxR1AceitouValeQuatro" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="18" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1CartaMinha" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR1CartaMinha" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1CartaAdv" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR1CartaAdv" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1PediuEnvido" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR1PediuEnvido" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1AceitouEnvido" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR1AceitouEnvido" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1PediuTruco" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR1PediuTruco" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1AceitouTruco" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR1AceitouTruco" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1PediuRetruco" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR1PediuRetruco" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1AceitouRetruco" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR1AceitouRetruco" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1PediuValeQuatro" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR1PediuValeQuatro" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1AceitouValeQuatro" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR1AceitouValeQuatro" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="jLabelR1CartaMinha">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Carta Minha"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1CartaAdv">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Carta Adv"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1PediuEnvido">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Pediu Envido"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1AceitouEnvido">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Aceitou Envido"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1PediuTruco">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Pediu Truco"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1AceitouTruco">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Aceitou Truco"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1PediuRetruco">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Pediu Retruco"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1AceitouRetruco">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Aceitou Retruco"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1PediuValeQuatro">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Pediu Vale Quatro"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1AceitouValeQuatro">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Aceitou Vale Quatro"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR1CartaMinha">
+                      <Properties>
+                        <Property name="maximumRowCount" type="int" value="15"/>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="15">
+                            <StringItem index="0" value="0"/>
+                            <StringItem index="1" value="1"/>
+                            <StringItem index="2" value="2"/>
+                            <StringItem index="3" value="3"/>
+                            <StringItem index="4" value="4"/>
+                            <StringItem index="5" value="5"/>
+                            <StringItem index="6" value="6"/>
+                            <StringItem index="7" value="7"/>
+                            <StringItem index="8" value="8"/>
+                            <StringItem index="9" value="9"/>
+                            <StringItem index="10" value="10"/>
+                            <StringItem index="11" value="11"/>
+                            <StringItem index="12" value="12"/>
+                            <StringItem index="13" value="13"/>
+                            <StringItem index="14" value="14"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR1CartaAdv">
+                      <Properties>
+                        <Property name="maximumRowCount" type="int" value="15"/>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="15">
+                            <StringItem index="0" value="0"/>
+                            <StringItem index="1" value="1"/>
+                            <StringItem index="2" value="2"/>
+                            <StringItem index="3" value="3"/>
+                            <StringItem index="4" value="4"/>
+                            <StringItem index="5" value="5"/>
+                            <StringItem index="6" value="6"/>
+                            <StringItem index="7" value="7"/>
+                            <StringItem index="8" value="8"/>
+                            <StringItem index="9" value="9"/>
+                            <StringItem index="10" value="10"/>
+                            <StringItem index="11" value="11"/>
+                            <StringItem index="12" value="12"/>
+                            <StringItem index="13" value="13"/>
+                            <StringItem index="14" value="14"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR1PediuEnvido">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N&#xe3;o teve"/>
+                            <StringItem index="1" value="N&#xe3;o"/>
+                            <StringItem index="2" value="Sim"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR1AceitouEnvido">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N&#xe3;o teve"/>
+                            <StringItem index="1" value="N&#xe3;o"/>
+                            <StringItem index="2" value="Sim"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR1AceitouRetruco">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N&#xe3;o teve"/>
+                            <StringItem index="1" value="N&#xe3;o"/>
+                            <StringItem index="2" value="Sim"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR1PediuRetruco">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N&#xe3;o teve"/>
+                            <StringItem index="1" value="N&#xe3;o"/>
+                            <StringItem index="2" value="Sim"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR1PediuTruco">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N&#xe3;o teve"/>
+                            <StringItem index="1" value="N&#xe3;o"/>
+                            <StringItem index="2" value="Sim"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR1AceitouValeQuatro">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N&#xe3;o teve"/>
+                            <StringItem index="1" value="N&#xe3;o"/>
+                            <StringItem index="2" value="Sim"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR1AceitouTruco">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N&#xe3;o teve"/>
+                            <StringItem index="1" value="N&#xe3;o"/>
+                            <StringItem index="2" value="Sim"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR1PediuValeQuatro">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N&#xe3;o teve"/>
+                            <StringItem index="1" value="N&#xe3;o"/>
+                            <StringItem index="2" value="Sim"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="jPanelRodada2">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder justification="1" title="Rodada 2"/>
+                      </Border>
+                    </Property>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabelR1CartaAdv1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="jComboBoxR2CartaAdv" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabelR1CartaMinha1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace pref="80" max="32767" attributes="0"/>
+                                          <Component id="jComboBoxR2CartaMinha" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabelR1PediuTruco1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelR1AceitouTruco1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelR1PediuRetruco1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelR1AceitouRetruco1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelR1PediuValeQuatro1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jComboBoxR2PediuValeQuatro" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxR2AceitouRetruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxR2PediuRetruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxR2AceitouTruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxR2PediuTruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabelR1AceitouValeQuatro1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxR2AceitouValeQuatro" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1CartaMinha1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR2CartaMinha" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1CartaAdv1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR2CartaAdv" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1PediuTruco1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR2PediuTruco" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1AceitouTruco1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR2AceitouTruco" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1PediuRetruco1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR2PediuRetruco" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1AceitouRetruco1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR2AceitouRetruco" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1PediuValeQuatro1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR2PediuValeQuatro" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1AceitouValeQuatro1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR2AceitouValeQuatro" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="jLabelR1CartaMinha1">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Carta Minha"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1CartaAdv1">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Carta Adv"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1PediuTruco1">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Pediu Truco"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1AceitouTruco1">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Aceitou Truco"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1PediuRetruco1">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Pediu Retruco"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1AceitouRetruco1">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Aceitou Retruco"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1PediuValeQuatro1">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Pediu Vale Quatro"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1AceitouValeQuatro1">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Aceitou Vale Quatro"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR2CartaMinha">
+                      <Properties>
+                        <Property name="maximumRowCount" type="int" value="15"/>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="15">
+                            <StringItem index="0" value="0"/>
+                            <StringItem index="1" value="1"/>
+                            <StringItem index="2" value="2"/>
+                            <StringItem index="3" value="3"/>
+                            <StringItem index="4" value="4"/>
+                            <StringItem index="5" value="5"/>
+                            <StringItem index="6" value="6"/>
+                            <StringItem index="7" value="7"/>
+                            <StringItem index="8" value="8"/>
+                            <StringItem index="9" value="9"/>
+                            <StringItem index="10" value="10"/>
+                            <StringItem index="11" value="11"/>
+                            <StringItem index="12" value="12"/>
+                            <StringItem index="13" value="13"/>
+                            <StringItem index="14" value="14"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR2CartaAdv">
+                      <Properties>
+                        <Property name="maximumRowCount" type="int" value="15"/>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="15">
+                            <StringItem index="0" value="0"/>
+                            <StringItem index="1" value="1"/>
+                            <StringItem index="2" value="2"/>
+                            <StringItem index="3" value="3"/>
+                            <StringItem index="4" value="4"/>
+                            <StringItem index="5" value="5"/>
+                            <StringItem index="6" value="6"/>
+                            <StringItem index="7" value="7"/>
+                            <StringItem index="8" value="8"/>
+                            <StringItem index="9" value="9"/>
+                            <StringItem index="10" value="10"/>
+                            <StringItem index="11" value="11"/>
+                            <StringItem index="12" value="12"/>
+                            <StringItem index="13" value="13"/>
+                            <StringItem index="14" value="14"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR2AceitouRetruco">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N&#xe3;o teve"/>
+                            <StringItem index="1" value="N&#xe3;o"/>
+                            <StringItem index="2" value="Sim"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR2PediuRetruco">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N&#xe3;o teve"/>
+                            <StringItem index="1" value="N&#xe3;o"/>
+                            <StringItem index="2" value="Sim"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR2PediuTruco">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N&#xe3;o teve"/>
+                            <StringItem index="1" value="N&#xe3;o"/>
+                            <StringItem index="2" value="Sim"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR2AceitouValeQuatro">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N&#xe3;o teve"/>
+                            <StringItem index="1" value="N&#xe3;o"/>
+                            <StringItem index="2" value="Sim"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR2AceitouTruco">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N&#xe3;o teve"/>
+                            <StringItem index="1" value="N&#xe3;o"/>
+                            <StringItem index="2" value="Sim"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR2PediuValeQuatro">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N&#xe3;o teve"/>
+                            <StringItem index="1" value="N&#xe3;o"/>
+                            <StringItem index="2" value="Sim"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="jPanelRodada3">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder justification="1" title="Rodada 3"/>
+                      </Border>
+                    </Property>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabelR1CartaAdv2" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="jComboBoxR3CartaAdv" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabelR1CartaMinha2" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace pref="80" max="32767" attributes="0"/>
+                                          <Component id="jComboBoxR3CartaMinha" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabelR1PediuTruco2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelR1AceitouTruco2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelR1PediuRetruco2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelR1AceitouRetruco2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabelR1PediuValeQuatro2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jComboBoxR3PediuValeQuatro" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxR3AceitouRetruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxR3PediuRetruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxR3AceitouTruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxR3PediuTruco" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabelR1AceitouValeQuatro2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                      <Component id="jComboBoxR3AceitouValeQuatro" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="18" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1CartaMinha2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR3CartaMinha" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1CartaAdv2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR3CartaAdv" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1PediuTruco2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR3PediuTruco" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1AceitouTruco2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR3AceitouTruco" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1PediuRetruco2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR3PediuRetruco" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1AceitouRetruco2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR3AceitouRetruco" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1PediuValeQuatro2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR3PediuValeQuatro" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabelR1AceitouValeQuatro2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jComboBoxR3AceitouValeQuatro" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="jLabelR1CartaMinha2">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Carta Minha"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1CartaAdv2">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Carta Adv"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1PediuTruco2">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Pediu Truco"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1AceitouTruco2">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Aceitou Truco"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1PediuRetruco2">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Pediu Retruco"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1AceitouRetruco2">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Aceitou Retruco"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1PediuValeQuatro2">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Pediu Vale Quatro"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabelR1AceitouValeQuatro2">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Aceitou Vale Quatro"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR3CartaMinha">
+                      <Properties>
+                        <Property name="maximumRowCount" type="int" value="15"/>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="15">
+                            <StringItem index="0" value="0"/>
+                            <StringItem index="1" value="1"/>
+                            <StringItem index="2" value="2"/>
+                            <StringItem index="3" value="3"/>
+                            <StringItem index="4" value="4"/>
+                            <StringItem index="5" value="5"/>
+                            <StringItem index="6" value="6"/>
+                            <StringItem index="7" value="7"/>
+                            <StringItem index="8" value="8"/>
+                            <StringItem index="9" value="9"/>
+                            <StringItem index="10" value="10"/>
+                            <StringItem index="11" value="11"/>
+                            <StringItem index="12" value="12"/>
+                            <StringItem index="13" value="13"/>
+                            <StringItem index="14" value="14"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR3CartaAdv">
+                      <Properties>
+                        <Property name="maximumRowCount" type="int" value="15"/>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="15">
+                            <StringItem index="0" value="0"/>
+                            <StringItem index="1" value="1"/>
+                            <StringItem index="2" value="2"/>
+                            <StringItem index="3" value="3"/>
+                            <StringItem index="4" value="4"/>
+                            <StringItem index="5" value="5"/>
+                            <StringItem index="6" value="6"/>
+                            <StringItem index="7" value="7"/>
+                            <StringItem index="8" value="8"/>
+                            <StringItem index="9" value="9"/>
+                            <StringItem index="10" value="10"/>
+                            <StringItem index="11" value="11"/>
+                            <StringItem index="12" value="12"/>
+                            <StringItem index="13" value="13"/>
+                            <StringItem index="14" value="14"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR3AceitouRetruco">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N&#xe3;o teve"/>
+                            <StringItem index="1" value="N&#xe3;o"/>
+                            <StringItem index="2" value="Sim"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR3PediuRetruco">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N&#xe3;o teve"/>
+                            <StringItem index="1" value="N&#xe3;o"/>
+                            <StringItem index="2" value="Sim"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR3PediuTruco">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N&#xe3;o teve"/>
+                            <StringItem index="1" value="N&#xe3;o"/>
+                            <StringItem index="2" value="Sim"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR3AceitouValeQuatro">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N&#xe3;o teve"/>
+                            <StringItem index="1" value="N&#xe3;o"/>
+                            <StringItem index="2" value="Sim"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR3AceitouTruco">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N&#xe3;o teve"/>
+                            <StringItem index="1" value="N&#xe3;o"/>
+                            <StringItem index="2" value="Sim"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBoxR3PediuValeQuatro">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="3">
+                            <StringItem index="0" value="N&#xe3;o teve"/>
+                            <StringItem index="1" value="N&#xe3;o"/>
+                            <StringItem index="2" value="Sim"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JButton" name="jButtonRodarConsulta">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Rodar Consulta"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButtonRodarConsultaMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -188,7 +1420,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" pref="564" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" pref="656" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>

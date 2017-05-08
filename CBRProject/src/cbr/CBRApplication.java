@@ -246,24 +246,6 @@ public class CBRApplication implements StandardCBRApplication {
 	 */
 	@Generated(value = { "ColibriStudio" })
 	public static void main(String[] args) {
-		CBRApplication cbrApp = new CBRApplication();
-		try {
-                    cbrApp.configure();
-                    cbrApp.preCycle();
-
-                    CBRQuery query = new CBRQuery();
-                    query.setDescription(new DescCaso());
-                                      
-                    CBRController c = new CBRController(cbrApp.retornaCasos());                  
-
-//                    jcolibri.method.gui.formFilling.ObtainQueryWithFormMethod.obtainQueryWithoutInitialValues(query, null, null);
-                    
-                    cbrApp.cycle(query);
-                    cbrApp.postCycle();
-			
-		} catch (ExecutionException e) {
-			e.printStackTrace();
-		}
-
+            CBRController c = new CBRController(new DescCaso(), new CBRApplication());
 	}
 }
