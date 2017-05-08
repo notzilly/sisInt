@@ -3,19 +3,20 @@ package controller;
 import cbr.CBRApplication;
 import gui.CasoGUI;
 import gui.MainGUI;
+import gui.ResultadoGUI;
 import java.awt.Component;
 import java.awt.Container;
+import java.util.Collection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javafx.embed.swing.JFXPanel;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import jcolibri.cbrcore.CBRQuery;
 import jcolibri.exception.ExecutionException;
 import jcolibri.method.retrieve.NNretrieval.NNConfig;
+import jcolibri.method.retrieve.RetrievalResult;
 import representation.DescCaso;
 import representation.TableModelCaso;
 
@@ -106,9 +107,9 @@ public class CBRController {
         
         // Volta
         dc.setGanheiEnvido((Integer) view.getjComboBoxGanheiEnvido().getSelectedIndex());
-        dc.setGanheiVolta((Integer) view.getjComboBoxGanheiEnvido().getSelectedIndex());
-        dc.setPontosMeus((Integer) view.getjComboBoxGanheiEnvido().getSelectedIndex());
-        dc.setPontosAdv((Integer) view.getjComboBoxGanheiEnvido().getSelectedIndex());
+        dc.setGanheiVolta((Integer) view.getjComboBoxGanheiVolta().getSelectedIndex());
+        dc.setPontosMeus((Integer) view.getjComboBoxPontosMeus().getSelectedIndex());
+        dc.setPontosAdv((Integer) view.getjComboBoxPontosAdv().getSelectedIndex());
         
         // Rodada 1
         dc.setR1CartaMinha((Integer) view.getjComboBoxR1CartaMinha().getSelectedIndex());
@@ -181,7 +182,7 @@ public class CBRController {
                 cnf = cbrApp.getSimilarityRetrucoR3();
             }
         }
-        else if(view.getjRadioButtonQueryValeQuatro().isSelected()){
+        else if(view.getjRadioButtonQueryVale4().isSelected()){
             if(view.getjRadioButtonRodada1().isSelected()){
                 cnf = cbrApp.getSimilarityValeQuatroR1();
             }
@@ -197,11 +198,12 @@ public class CBRController {
 
         query.setDescription(this.dc);
         
-        System.out.println(query);
-        
         try {
-            cbrApp.cycle(query);
+            Collection<RetrievalResult> result = cbrApp.cycle(query, cbrApp.getSimilarityGeralR1());
             cbrApp.postCycle();
+            ResultadoGUI resultGUI = new ResultadoGUI(result, query);
+            resultGUI.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            resultGUI.setVisible(true);    
         } catch (ExecutionException ex) {
             Logger.getLogger(CBRController.class.getName()).log(Level.SEVERE, null, ex);
         }
