@@ -214,6 +214,10 @@ public class MainGUI extends javax.swing.JFrame {
         return jComboBoxR3PediuValeQuatro;
     }
     
+    public JPanel getjPanelDadosVoltas(){
+        return jPanelDadosVolta;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -222,6 +226,7 @@ public class MainGUI extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         buttonGroupTipoQuery = new javax.swing.ButtonGroup();
         buttonGroupRodada = new javax.swing.ButtonGroup();
@@ -397,9 +402,19 @@ public class MainGUI extends javax.swing.JFrame {
 
         buttonGroupRodada.add(jRadioButtonRodada2);
         jRadioButtonRodada2.setText("Rodada 2");
+        jRadioButtonRodada2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonRodadaActionPerformed(evt);
+            }
+        });
 
         buttonGroupRodada.add(jRadioButtonRodada3);
         jRadioButtonRodada3.setText("Rodada 3");
+        jRadioButtonRodada3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonRodadaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelRodadaLayout = new javax.swing.GroupLayout(jPanelRodada);
         jPanelRodada.setLayout(jPanelRodadaLayout);
@@ -460,6 +475,9 @@ public class MainGUI extends javax.swing.JFrame {
         jComboBoxPontosAdv.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23" }));
 
         jPanelRodada1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Rodada 1", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, buttonGroupRodada, org.jdesktop.beansbinding.ELProperty.create("Rodada1"), jPanelRodada1, org.jdesktop.beansbinding.BeanProperty.create("name"));
+        bindingGroup.addBinding(binding);
 
         jLabelR1CartaMinha.setText("Carta Minha");
 
@@ -592,6 +610,9 @@ public class MainGUI extends javax.swing.JFrame {
 
         jPanelRodada2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Rodada 2", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
 
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, buttonGroupRodada, org.jdesktop.beansbinding.ELProperty.create("Rodada2"), jPanelRodada2, org.jdesktop.beansbinding.BeanProperty.create("name"));
+        bindingGroup.addBinding(binding);
+
         jLabelR1CartaMinha1.setText("Carta Minha");
 
         jLabelR1CartaAdv1.setText("Carta Adv");
@@ -700,6 +721,9 @@ public class MainGUI extends javax.swing.JFrame {
         );
 
         jPanelRodada3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Rodada 3", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, buttonGroupRodada, org.jdesktop.beansbinding.ELProperty.create("Rodada3"), jPanelRodada3, org.jdesktop.beansbinding.BeanProperty.create("name"));
+        bindingGroup.addBinding(binding);
 
         jLabelR1CartaMinha2.setText("Carta Minha");
 
@@ -966,6 +990,8 @@ public class MainGUI extends javax.swing.JFrame {
                 .addGap(0, 0, 0))
         );
 
+        bindingGroup.bind();
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1109,5 +1135,6 @@ public class MainGUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTableTodosOsCasos;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

@@ -243,6 +243,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Rodada 2"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonRodadaActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JRadioButton" name="jRadioButtonRodada3">
                   <Properties>
@@ -251,6 +254,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Rodada 3"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonRodadaActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -570,6 +576,9 @@
                       </Border>
                     </Property>
                   </Properties>
+                  <BindingProperties>
+                    <BindingProperty name="name" source="buttonGroupRodada" sourcePath="Rodada1" target="jPanelRodada1" targetPath="name" updateStrategy="0" immediately="false"/>
+                  </BindingProperties>
 
                   <Layout>
                     <DimensionLayout dim="0">
@@ -877,6 +886,9 @@
                       </Border>
                     </Property>
                   </Properties>
+                  <BindingProperties>
+                    <BindingProperty name="name" source="buttonGroupRodada" sourcePath="Rodada2" target="jPanelRodada2" targetPath="name" updateStrategy="0" immediately="false"/>
+                  </BindingProperties>
 
                   <Layout>
                     <DimensionLayout dim="0">
@@ -1135,6 +1147,9 @@
                       </Border>
                     </Property>
                   </Properties>
+                  <BindingProperties>
+                    <BindingProperty name="name" source="buttonGroupRodada" sourcePath="Rodada3" target="jPanelRodada3" targetPath="name" updateStrategy="0" immediately="false"/>
+                  </BindingProperties>
 
                   <Layout>
                     <DimensionLayout dim="0">

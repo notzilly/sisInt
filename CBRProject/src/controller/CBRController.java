@@ -7,9 +7,11 @@ import java.awt.Component;
 import java.awt.Container;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.embed.swing.JFXPanel;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import jcolibri.cbrcore.CBRQuery;
 import jcolibri.exception.ExecutionException;
@@ -62,6 +64,20 @@ public class CBRController {
                     }
                 }                    
             }   
+    }
+    
+    public void disableEnvido(Container cont){
+        //Disable Fields
+        for(Component c : cont.getComponents()){
+            if(c instanceof JComboBox){ 
+                c.setEnabled(false);
+            }
+            else{
+                if(c instanceof Container){
+                    disableEnvido((Container)c);
+                }
+            }
+        }        
     }
     
     public void rodarConsulta() {
@@ -130,13 +146,20 @@ public class CBRController {
             enableAll(view.getjPanelNovaQuery());
         }
         else if(evt.getSource() == view.getjRadioButtonQueryEnvido()){
+            disableEnvido(view.getjPanelNovaQuery());
+            view.getjRadioButtonRodada1().setEnabled(false);
             view.getjRadioButtonRodada2().setEnabled(false);
             view.getjRadioButtonRodada3().setEnabled(false);
-            view.getjComboBoxGanheiVolta().setEnabled(false);
-            view.getjComboBoxPontosAdv().setEnabled(false);
-            view.getjComboBoxPontosMeus().setEnabled(false);
+            view.getjComboBoxCarta1().setEnabled(true);
+            view.getjComboBoxCarta2().setEnabled(true);
+            view.getjComboBoxCarta3().setEnabled(true);
+            view.getjComboBoxGanheiEnvido().setEnabled(true);
+            view.getjComboBoxR1AceitouEnvido().setEnabled(true);
+            view.getjComboBoxR1PediuEnvido().setEnabled(true);
             view.getjComboBoxGanheiEnvido().setSelectedIndex(2);
-            
+        }
+        else if(evt.getSource() == view.getjRadioButtonQueryTruco()){
+            view.getjComboBoxGanheiEnvido().setEnabled(false);
         }
         else if(evt.getSource() == view.getjRadioButtonQueryVale4()){
             JOptionPane.showMessageDialog(view, "Clicou no radio button vale 4");
@@ -144,8 +167,30 @@ public class CBRController {
     }
     
     public void trocaRodada(java.awt.event.ActionEvent evt){
+        enableAll(view.getjPanelNovaQuery());
         if(evt.getSource() == view.getjRadioButtonRodada1()){
-            JOptionPane.showMessageDialog(view, "Clicou no radio button geral");
+            for(Component c : view.getjPanelDadosVoltas().getComponents()){
+                if(c instanceof JPanel){
+                    if( !((JPanel)c).getName().equals("Rodada1") ){
+                       for(Component d :((JPanel)c).getComponents()){
+                           if(d instanceof JComboBox)
+                               d.setEnabled(false);
+                       }
+                    }
+                }
+            }
+        }
+        if(evt.getSource() == view.getjRadioButtonRodada2()){
+            for(Component c : view.getjPanelDadosVoltas().getComponents()){
+                if(c instanceof JPanel){
+                    if( ((JPanel)c).getName().equals("Rodada3") ){
+                       for(Component d :((JPanel)c).getComponents()){
+                           if(d instanceof JComboBox)
+                               d.setEnabled(false);
+                       }
+                    }
+                }
+            }
         }
     }
     
