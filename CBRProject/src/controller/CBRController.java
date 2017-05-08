@@ -3,10 +3,14 @@ package controller;
 import cbr.CBRApplication;
 import gui.CasoGUI;
 import gui.MainGUI;
+import java.awt.Component;
+import java.awt.Container;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JRadioButton;
 import jcolibri.cbrcore.CBRQuery;
 import jcolibri.exception.ExecutionException;
 import representation.DescCaso;
@@ -42,6 +46,23 @@ public class CBRController {
         this.view.setVisible(true);
         this.view.setExtendedState(this.view.getExtendedState() | JFrame.MAXIMIZED_BOTH);
     }  
+    
+    public void enableAll(Container evt){
+        for(Component c : evt.getComponents()){
+                if(c instanceof JRadioButton){
+                    c.setEnabled(true);
+                }
+                else if(c instanceof JComboBox){
+                    c.setEnabled(true);
+                    ((JComboBox)c).setSelectedIndex(0);
+                }
+                else{
+                    if(c instanceof Container){
+                        enableAll((Container)c);
+                    }
+                }                    
+            }   
+    }
     
     public void rodarConsulta() {
         // Mão
@@ -105,9 +126,19 @@ public class CBRController {
 
     public void trocaCategoria(java.awt.event.ActionEvent evt){
         if(evt.getSource() == view.getjRadioButtonQueryGeral()){
-            JOptionPane.showMessageDialog(view, "Clicou no radio button geral");
+            //JOptionPane.showMessageDialog(view, "Clicou no radio button geral");
+            enableAll(view.getjPanelNovaQuery());
+        }
+        else if(evt.getSource() == view.getjRadioButtonQueryEnvido()){
+            view.getjRadioButtonRodada2().setEnabled(false);
+            view.getjRadioButtonRodada3().setEnabled(false);
+            view.getjComboBoxGanheiVolta().setEnabled(false);
+            view.getjComboBoxPontosAdv().setEnabled(false);
+            view.getjComboBoxPontosMeus().setEnabled(false);
+            view.getjComboBoxGanheiEnvido().setSelectedIndex(2);
             
-        } else if(evt.getSource() == view.getjRadioButtonQueryVale4()){
+        }
+        else if(evt.getSource() == view.getjRadioButtonQueryVale4()){
             JOptionPane.showMessageDialog(view, "Clicou no radio button vale 4");
         }
     }

@@ -2,6 +2,7 @@ package gui;
 
 import controller.CBRController;
 import javax.swing.JComboBox;
+import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTable;
 import javax.swing.UIManager;
@@ -34,9 +35,13 @@ public class MainGUI extends javax.swing.JFrame {
         initComponents();
     }
 
-    public JTable getjTableTodosOsCasos() {
+   public JTable getjTableTodosOsCasos() {
         return jTableTodosOsCasos;
     }
+   
+   public JPanel getjPanelNovaQuery(){
+       return jPanelNovaQuery;
+   }
 
     // Radio Buttons do tipo de query
     public JRadioButton getjRadioButtonQueryEnvido() {
@@ -913,7 +918,7 @@ public class MainGUI extends javax.swing.JFrame {
                         .addComponent(jPanelRodada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanelTipoQuery, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jPanelDadosVolta, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(325, Short.MAX_VALUE))
+                .addContainerGap(334, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Nova Consulta", jPanelNovaQuery);
@@ -940,7 +945,7 @@ public class MainGUI extends javax.swing.JFrame {
             jPanelTodosOsCasosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelTodosOsCasosLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 656, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 670, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
